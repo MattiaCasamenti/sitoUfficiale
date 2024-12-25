@@ -1,0 +1,70 @@
+/* Sezione con effetto parallasse */
+.parallax-section {
+    position: relative;
+    height: 600px; /* Altezza della sezione */
+    background-image: url("../Immagini/background.jpg"); /* Percorso dell'immagine */
+    background-attachment: fixed; /* Imposta l'immagine di sfondo come fissa */
+    background-size: cover; /* Copre l'intera area della sezione */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Impedisce che l'immagine si ripeta */
+    text-align: center;
+    padding: 50px 20px;
+    color: white; /* Colore del testo sopra l'immagine */
+}
+
+.parallax-section h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.contact-options p {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.email-option {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.email-option .arrow {
+    font-size: 24px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.email-option .arrow:hover {
+    transform: translateX(5px);
+}
+
+.hidden-email-form {
+    display: none; /* Nascondi il form inizialmente */
+    margin-top: 20px;
+}
+
+#email-form input,
+#email-form textarea {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#email-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#email-form button:hover {
+    background-color: #555;
+}

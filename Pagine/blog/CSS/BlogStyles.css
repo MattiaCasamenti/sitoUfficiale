@@ -1,0 +1,41 @@
+html, body {
+  height: 100%; /* Assicura che l'intera altezza sia considerata */
+}
+
+body {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1; /* Si espande per occupare lo spazio disponibile */
+}
+footer {
+  position: relative;
+  width: 100%; /* Larghezza completa */
+  bottom: 0; /* Assicura che resti in fondo */
+}
+.floating-home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000; /* Sopra gli altri elementi */
+}
+
+.floating-home-btn:hover {
+    background-color: #b30000;
+    transform: scale(1.1);
+}

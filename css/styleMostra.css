@@ -1,0 +1,38 @@
+.polaroid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 50px auto;
+    justify-content: center;
+    max-width: 900px;
+}
+
+/* Contenitore per ciascuna polaroid */
+.polaroid {
+    position: relative;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.polaroid:hover {
+    transform: rotate(10deg) scale(1.1); /* Rotazione ed effetto zoom */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombra al passaggio del mouse */
+}
+
+/* Immagini all'interno delle polaroid */
+.polaroid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Testo opzionale sotto ogni immagine */
+.polaroid p {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}

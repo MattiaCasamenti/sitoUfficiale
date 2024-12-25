@@ -1,0 +1,50 @@
+.parallelogram {
+    width: 1700px;
+    height: 500px;
+    background-color: #b30000;
+    position: relative;
+    margin: 100px auto;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2.8s ease, transform 1.5s ease;
+    transform: translateY(100px);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.parallelogram.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.part {
+    height: 100%;
+    width: 33.33%;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+.part img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 0; 
+}
+.part:hover {
+    transform: scale(1.05);
+}
+.part1 {
+    left: 0%;
+}
+.part2 {
+    left: 33.33%;
+}
+.part3 {
+    left: 66.66%;
+}
+.part.visible {
+    transform: translateY(0);
+}

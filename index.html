@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleMain.css">
+	<link rel="stylesheet" href="css/styleHamburger.css">
+	<link rel="stylesheet" href="css/styleArticoli.css">
+	<link rel="stylesheet" href="css/styleEmail.css">
+	<link rel="stylesheet" href="css/styleParallelogramma.css">
+	<link rel="stylesheet" href="css/styleMostra.css">
+	<link rel="stylesheet" href="css/styleFooter.css">
+	
+    <title>Mattia Casamenti - Autodidatta</title>
+</head> 	
+<body>
+									<!-- Hamburger -->
+<div id="home"></div>
+<div class="hamburger" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+<div id="menu" class="menu">
+    <a href="Pagine/chiSono.html">CHI SONO</a>
+    <a href="CurriculumCasamentiMattia.pdf" download="Curriculum_Casamenti_Mattia.pdf">CURRICULUM</a>
+    <a href="Pagine/Social.html">I MIEI CANALI</a>
+    <a href="Pagine/blog/blog.html">I MIEI PROGETTI</a>
+    <a href="Pagine/conoscimiMeglio.html">CONOSCIMI MEGLIO</a>
+</div>
+									<!-- Pre-Linea -->
+<div class="intestazione">
+    <img src="Immagini/logo.png" alt="Logo">
+    <h2>Mattia Casamenti</h2>	
+</div>
+<hr></hr>
+									<!-- Immagine-->
+<img src="Immagini/Stellone_d'Italia.svg.png" alt="Stellone d'Italia" class="rotating-image">
+									<!-- Scritte -->
+<div class="contenitore">
+    <p>Ciao a tutti, il mio nome è <b>Mattia</b></p>
+    <h1>Sono un giovane ragazzo <br>motivato a fare esperienze, conoscere persone e mettermi alla prova!</h1>
+    <h2 style="color:#b30000;">--- </h2>
+    <p>Cliccando il bottone qui sotto potrai vedere i modi per contattarmi</p>
+    <a href="Pagine/social.html" class="button"><span>Contattami</span></a>
+</div>
+<div class="cerchio"></div>
+<!-- Parallelogramma -->
+<div class="parallelogram">
+    <div class="part part1" onclick="location.href='Pagine/curriculum.html';">
+        <img src="Immagini/Ravenna.jpg" style="size: 160px" alt="Foto 1">
+    </div>
+    <div class="part part2" onclick="location.href='Pagine/chiSono.html';">
+            <img src="Immagini/Computer.jpeg" alt="Foto 2">
+    </div>
+    <div class="part part3" onclick="location.href='Pagine/blog.html';">
+        <img src="Immagini/Lavoro.jpg" alt="Foto 3">
+    </div>
+</div>
+<!-- Seconda schermata con Tabella-->
+<div class="contenitore">
+	<div class="riquadro">RISULTATI</div>
+	<h1>Non sono solo<br>numeri</h1>
+</div>
+<div class="table-container">
+	<table>
+		<tr>
+			<th>Social</th>
+			<th>Subscribers</th>
+			<th>Link</th>
+		</tr>
+		<tr>
+			<th>Youtube</th>
+			<th>11</th>
+			<th><a href="https://www.youtube.com/@MattiaCasamenti" target="_blank">Vai al canale →</a></th>
+		</tr>
+		<tr>
+			<th>Instagram</th>
+			<th>56</th>
+			<th><a href="https://www.instagram.com/mattia_casaaa/?utm_source=qr#" target="_blank">Vai al canale →</a></th>
+		</tr>
+		<tr>
+			<th>Site</th>
+			<th>241</th>
+			<th>Benvenuto</th>
+		</tr>
+	</table>
+</div>
+<div class="citazione" id="citazione">Caricamento citazione...</div>
+<!-- Sezione Blog Ampliata -->
+<div class="contenitore-blog">
+    <h2>I miei Progetti</h2>
+    <p>Vuoi vedere tutto quello che ho compiuto negli <b>anni?<b></p>
+    <!-- Link alla pagina del blog -->
+    <div class="articoli-grid">
+        <div class="articolo">
+            <img src="Immagini/progetti/Prankster.png" alt="Articolo 1">
+            <h3>PranksterHouse - il mio primo canale YouTube</h3>
+            <p>Errori fatti, calcoli sbagliati e consigli utili per chi magari cerca di iniziare un percorso su YouTube</p>
+            <a href="#" class="pulsante-articolo">Leggi di più</a>
+        </div>
+        <div class="articolo">
+            <img src="Immagini/progetti/SitoWeb.jpg" alt="Articolo 2">
+            <h3>Sito Web Portfolio Professionale</h3>
+            <p>Racconto la realizzazione di questo sito: strumenti utilizzati, lezioni imparate e la mia documentazione su YouTube</p>
+            <a href="#" class="pulsante-articolo">Leggi di più</a>
+        </div>
+        <div class="articolo">
+            <img src="Immagini/progetti/Lego.jpg" alt="Articolo 3">
+            <h3>DataBase personalizzato per le minifigures LEGO</h3>
+            <p>In questo articolo espongo tutti i passaggi che ho fatto per realizzare un database con MySQL</p>
+            <a href="#" class="pulsante-articolo">Leggi di più</a>
+        </div>
+	</div>
+		<!-- Pulsante per visualizzare più articoli -->
+	<div class="blog-more">
+		<a href="Pagine/blog/blog.html" class="button"><span>Vai ai miei progetti</span></a>
+	</div>
+</div>
+<!-- MAIL/SECONDA AREA PARALLASSE -->
+<div class="parallax-section">
+    <h1>Vuoi parlare subito con<br />me?</h1>
+    <div class="contact-options">
+        <p>Se sei un'azienda o un libero professionista e desideri scambiare qualche parola con me</p>
+        <p class="email-option">Scrivimi una Mail <span class="arrow" onclick="showEmailForm()">&#8594;</span></p>
+    </div>
+
+    <!-- Questo è il form nascosto inizialmente, verrà mostrato cliccando sulla freccia -->
+    <form id="email-form" class="hidden-email-form" action="mailto:mattiacasamenti666@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Il tuo nome" required>
+        <input type="email" name="email" placeholder="La tua email" required>
+        <textarea name="message" placeholder="Scrivi il tuo messaggio qui..." required></textarea>
+        <button type="submit">Invia</button>
+    </form>
+</div>
+<div class="footer">
+    <!-- Link "Home" e "Chi Siamo" -->
+    <div class="company-info">
+        <a href="#home" class="page-link">Home</a>
+        <a href="Pagine/chiSono.html" class="page-link">Chi Sono</a>
+        <p style="font-size: 17px">SRL Mattia.com</p>
+        <p style="font-size: 17px">Email commerciale: mattiacasamenti666@gmail.com</p>
+    </div>
+
+    <!-- Icone Social in basso a destra -->
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><img src="Immagini/facebook.png" alt="Facebook"></a>
+        <a href="https://youtube.com" target="_blank"><img src="Immagini/youtube.png" alt="YouTube"></a>
+        <a href="https://instagram.com" target="_blank"><img src="Immagini/instagram.png" alt="Instagram"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="Immagini/linkedin.png" alt="LinkedIn"></a>
+    </div>
+</div>
+<!-- Funzioni-->
+    <script>
+<!-- Hamburger Menu-->
+	function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector('.hamburger');
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+}
+    <!-- Scroll scomparsa parallelogramma-->
+		window.addEventListener('scroll', function() {
+            const parallelogram = document.querySelector('.parallelogram');
+            const parts = document.querySelectorAll('.part');
+            const windowHeight = window.innerHeight;
+            const parallelogramPosition = parallelogram.getBoundingClientRect().top;
+
+            if (parallelogramPosition < windowHeight) {
+                parallelogram.classList.add('visible');
+                parts.forEach(part => part.classList.add('visible'));
+            }
+        });
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });	
+		document.addEventListener("DOMContentLoaded", () => {
+    const rows = document.querySelectorAll(".table-container table tr");
+    // Funzione per mostrare le righe della Tabella
+    const showRows = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+    const observer = new IntersectionObserver(showRows, {
+        root: null, // Usa la finestra come viewport
+        threshold: 0.1, // Rileva quando il 10% della riga è visibile
+    });
+    rows.forEach(row => observer.observe(row));
+});
+// EMAIL
+function showEmailForm() {
+		const emailForm = document.getElementById('email-form');
+		emailForm.style.display = 'block';
+	}
+//CITAZIONE
+        const citazioni = [
+            "La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon",
+            "''Il successo è la somma di piccoli sforzi ripetuti giorno dopo giorno. - Robert Collier''",
+            "Sii il cambiamento che vuoi vedere nel mondo. - Mahatma Gandhi",
+            "La felicità non è qualcosa di già pronto. Viene dalle tue azioni. - Dalai Lama"
+        ];
+
+        // Funzione per ottenere l'indice della citazione del giorno
+        function indiceDelGiorno(totaleCitazioni) {
+            const oggi = new Date();
+            const giornoDellAnno = Math.floor((oggi - new Date(oggi.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            return giornoDellAnno % totaleCitazioni; // Cicla tra le citazioni
+        }
+
+        // Funzione principale per mostrare la citazione del giorno
+        function mostraCitazione() {
+            const indice = indiceDelGiorno(citazioni.length); // Calcola l'indice
+            const citazione = citazioni[indice]; // Seleziona la citazione
+            document.getElementById("citazione").textContent = citazione; // Mostra la citazione
+        }
+
+        // Esegui la funzione all'avvio
+        mostraCitazione();
+    </script>
+</body>
+</html>

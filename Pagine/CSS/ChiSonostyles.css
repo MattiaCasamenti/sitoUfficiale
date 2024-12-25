@@ -1,0 +1,287 @@
+/* Stile globale */
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background: #2C3E50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #34495E;
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+    margin: auto;
+    max-width: 100%;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+a {
+    color: #E74C3C;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.container {
+    max-width: 1000px; /* Definisce una larghezza massima per il contenuto */
+    margin: 0 auto; /* Centra il contenitore orizzontalmente */
+    padding: 0 20px; /* Aggiunge un po' di spazio interno per schermi piccoli */
+    box-sizing: border-box; /* Assicura che padding e bordo non superino la larghezza */
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #f1f1f1;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #E74C3C;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #C0392B;
+}
+.header-slide {
+    position: relative;
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.content-fade {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+/* Stile per la sezione intro */
+.intro {
+	margin-top: 75px;
+    display: flex; /* Abilita Flexbox */
+    align-items: center; /* Centra verticalmente immagine e testo */
+    gap: 20px; /* Spazio tra immagine e testo */
+    flex-wrap: wrap; /* Rende il contenuto responsivo su schermi piccoli */
+    justify-content: flex-start; /* Allinea a sinistra su schermi grandi */
+}
+
+.profile-pic {
+    width: 150px; /* Dimensione fissa dell'immagine */
+    height: auto; /* Mantiene il rapporto d'aspetto */
+    border-radius: 50%; /* Rende l'immagine rotonda */
+    flex-shrink: 0; /* Impedisce che l'immagine si ridimensioni */
+}
+
+/* Aggiusta il testo */
+.intro h2, 
+.intro p {
+    margin: 0; /* Rimuove margini predefiniti */
+}
+
+/* Contenitore immagini */
+.immagine-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+/* Immagine 1 - Rotazione */
+.img-assoluta1 {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.rotazione {
+    transform: rotate(360deg);
+}
+
+/* Immagine 2 - Sfumatura */
+.contenitore {
+    position: relative;
+    width: 200px;
+    border: 8px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.immagine {
+    width: 100%;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+    cursor: pointer;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* Immagine 3 - Rotazione 3D */
+.contenitore3D {
+    perspective: 1000px;
+    width: 200px;
+}
+
+.img-assoluta3 {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+
+.gira {
+    transform: rotateY(180deg);
+}
+
+/* Pulsante Home Flottante */
+.floating-home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000;
+}
+
+.floating-home-btn:hover {
+    background-color: #b30000;
+    transform: scale(1.1);
+}
+
+/* Responsività */
+@media (max-width: 1024px) {
+    .img-assoluta1,
+    .contenitore,
+    .contenitore3D {
+        width: 180px;
+    }
+
+    .immagine-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .img-assoluta1,
+    .contenitore,
+    .contenitore3D {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .floating-home-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    /* Aggiustamenti per la sezione intro su dispositivi piccoli */
+    .intro {
+        flex-direction: column; /* Immagine sopra il testo su dispositivi piccoli */
+        align-items: center; /* Centra immagine e testo */
+        gap: 10px; /* Spazio tra immagine e testo */
+    }
+
+    .profile-pic {
+        width: 120px; /* Riduce la dimensione dell'immagine */
+    }
+}
+
+/* Ulteriori aggiustamenti per schermi molto piccoli */
+@media (max-width: 480px) {
+    .img-assoluta1,
+    .contenitore,
+    .contenitore3D {
+        width: 120px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .floating-home-btn {
+        font-size: 1.2rem;
+    }
+
+    /* Aggiustamenti per la sezione intro su schermi molto piccoli */
+    .intro {
+        flex-direction: column; /* Immagine sopra il testo */
+        gap: 15px; /* Aggiusta lo spazio */
+    }
+
+    .profile-pic {
+        width: 100px; /* Ulteriore riduzione della dimensione */
+    }
+}
