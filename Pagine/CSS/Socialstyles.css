@@ -183,3 +183,13 @@ footer a:hover {
     background-color: #b30000;
     transform: scale(1.1);
 }
+@media (max-width: 768px) {
+    .floating-home-btn {
+		right: 50px;
+		bottom: 20px;
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+}
+

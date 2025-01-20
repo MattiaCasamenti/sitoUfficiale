@@ -38,7 +38,11 @@ ul {
 ul li {
     margin: 10px 0;
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Evita spazi bianchi sotto le immagini */
+}
 a {
     color: #E74C3C;
     text-decoration: none;
@@ -109,11 +113,11 @@ footer {
 
 .profile-pic {
     width: 150px; /* Dimensione fissa dell'immagine */
-    height: auto; /* Mantiene il rapporto d'aspetto */
+    height:  150px; /* Mantiene il rapporto d'aspetto */
     border-radius: 50%; /* Rende l'immagine rotonda */
     flex-shrink: 0; /* Impedisce che l'immagine si ridimensioni */
+	border: 7px solid #2C3E50;
 }
-
 /* Aggiusta il testo */
 .intro h2, 
 .intro p {
@@ -144,8 +148,9 @@ footer {
 
 /* Immagine 2 - Sfumatura */
 .contenitore {
-    position: relative;
+	position: center;
     width: 200px;
+	height: 200px;
     border: 8px solid #333;
     border-radius: 10px;
     overflow: hidden;
@@ -153,7 +158,7 @@ footer {
 
 .immagine {
     width: 100%;
-    height: auto;
+    height: 100%;
     transition: opacity 1s ease-in-out;
     cursor: pointer;
 }
@@ -166,11 +171,12 @@ footer {
 .contenitore3D {
     perspective: 1000px;
     width: 200px;
+	height: 280px;
 }
 
 .img-assoluta3 {
     width: 100%;
-    height: auto;
+    height: 100%;
     transition: transform 1s ease-in-out;
     transform-style: preserve-3d;
     backface-visibility: hidden;
@@ -210,8 +216,8 @@ footer {
     .contenitore,
     .contenitore3D {
         width: 180px;
+		height: auto;
     }
-
     .immagine-container {
         flex-direction: column;
         align-items: center;
@@ -241,11 +247,6 @@ footer {
         font-size: 1.2rem;
     }
 
-    .floating-home-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-    }
 
     /* Aggiustamenti per la sezione intro su dispositivi piccoli */
     .intro {
@@ -271,17 +272,15 @@ footer {
         font-size: 1.5rem;
     }
 
-    .floating-home-btn {
-        font-size: 1.2rem;
-    }
-
     /* Aggiustamenti per la sezione intro su schermi molto piccoli */
     .intro {
+		margin-top: 5px;
         flex-direction: column; /* Immagine sopra il testo */
         gap: 15px; /* Aggiusta lo spazio */
     }
 
     .profile-pic {
-        width: 100px; /* Ulteriore riduzione della dimensione */
+        width: 200px; /* Ulteriore riduzione della dimensione */
+		height: 200px;
     }
 }

@@ -10,10 +10,12 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background: #000;
+            color: #fff;
         }
         header {
-            background: #333;
-            color: #fff;
+            background: #fff;
+            color: #000;
             padding: 10px 0;
         }
         header nav {
@@ -22,7 +24,7 @@
             gap: 20px;
         }
         header nav a {
-            color: #fff;
+            color: #000;
             text-decoration: none;
             font-weight: bold;
         }
@@ -35,32 +37,55 @@
             padding: 20px;
         }
         h1 {
-            color: #333;
+			font-size: 40px;
+            color: #00FF00;
         }
+		p {
+			color: #00FFFF;
+		}
+		img {
+			position: relative;
+			width: 450px;
+			height: auto;
+		}
         blockquote {
             border-left: 4px solid #ccc;
             margin: 20px 0;
             padding-left: 10px;
             font-style: italic;
-            color: #555;
+            color: #FF69B4;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px 0;
+        .contenitore {
+            position: relative;
+            width: 600px; /* Larghezza del contenitore */
+            height: 400px; /* Altezza del contenitore */
+            border: 12px solid #00FF00; /* Bordo del contenitore */
+            overflow: hidden; /* Evita che l'immagine esca dal contenitore */
+            position: relative; /* Posizione relativa per il movimento assoluto dell'immagine */
         }
+
+        /* Immagine che rimbalza */
+        .immagine {
+            position: absolute;
+            width: 150px; /* Larghezza dell'immagine */
+            height: 150px; /* Altezza dell'immagine */
+            transform-origin: center; /* Rotazione intorno al centro */
+			cursor: pointer;
+		}
+
         footer {
             text-align: center;
-            margin: 20px 0;
-            color: #666;
+			height: 50px;
+			background-color: cyan;
+            color: black;
             font-size: 0.9em;
+			
         }
 		.floating-home-btn {
 			position: fixed;
 			bottom: 20px;
 			right: 20px;
-			background-color: white;
+			background-color: #333;
 			color: white;
 			border-radius: 50%;
 			width: 50px;
@@ -70,12 +95,13 @@
 			justify-content: center;
 			text-decoration: none;
 			font-size: 1.5rem;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 			transition: background-color 0.3s, transform 0.2s;
 			z-index: 1000; /* Sopra gli altri elementi */
 		}
 	.floating-home-btn:hover {
-		background-color: #b30000;
+		background-color: #fff;
+		color: #000;
 		transform: scale(1.1);
 	}
     </style>
@@ -85,7 +111,7 @@
 <header>
     <nav>
 		<a href="../../../index.html">Home</a>
-        <a href="../blog.html">Torna al blog</a>
+        <a href="../blog.html">Torna ai Progetti</a>
         <a href="../../chiSono.html">Chi Sono</a>
         <a href="../../social.html">Contattami</a>
         <a href="../../Conoscimi">Conoscimi meglio</a>
@@ -93,39 +119,119 @@
 </header>
 
 <div class="container">
-    <h1>Benvenuti nel nostro blog</h1>
+    <h1>PRANKSTER_HOUSE</h1>
     <p>
-        Questo è un esempio di articolo creato con una struttura HTML professionale. 
-        Qui puoi inserire il testo che desideri, completo di immagini, citazioni e altri contenuti.
+		Cominciamo dall'inizio: cos'è PranksterHouse? PranksterHouse è stato il mio primo canale YouTube che, non solo ho gestito ma proprio ho creato da 0. In questo canale utilizzavo 
+		la OBS Virtual Camera, per riprodurre dei Jumpscare agli sconosciuti che mi capitavano su Omegle. Qui potete vedere il mio video meglio riuscito.
+	
+	
+	</p>
+	<div class="contenitore">
+        <a href="https://www.youtube.com/@PranksterHouse-xr2pc"><img id="logo" src="prank.png" alt="Logo" class="immagine"></a>
+    </div>
+	    <p>
+        PranksterHouse è stata la mia primissima creazione. Qui sopra potrai vedere il logo da me creato.
     </p>
 
     <blockquote>
-        "Il segreto del successo è fare le cose comuni in modo straordinario." – John D. Rockefeller
+        "RIP Omegle, Despite Everything" – Someone
     </blockquote>
 
-    <p>
-        Puoi personalizzare questo template aggiungendo i tuoi contenuti. 
-        Ad esempio, immagini che migliorano l'aspetto visivo del tuo articolo:
-    </p>
 
-    <img src="https://via.placeholder.com/800x400" alt="Esempio di immagine">
-    <p>
-        Oltre a immagini, puoi inserire altre citazioni motivazionali o pertinenti al tuo argomento:
+	<h2>Pianificazione</h2>
+    <p>Prima di tutto feci un brainstorming:
+		</p>
+		<ul>
+			<li>Che cosa volevo pubblicare?</li>
+			<li>Che materiali avevo a disposizione? </li>
+			<li>Quali programmi mi sarebbero serviti nella mia avventura?</li>
+			<li>Volevo fare un canale YouTube mostrando o non mostrando la mia faccia?</li>
+			<li>terzo elemento</li>
+		</ul>	
+		<p>
+		Ero sicuro che se non avessi creato un canale basato su una mia passione, non sarei stato motivato a continuare ciò che avevo iniziato, poi era 
+		appena iniziato il boom dell'intelligenza artificiale, quindi fare un canale faceless era troppo allettante. Infine, dopo aver scaricato OBS, ShotCut e aver trovato moltissime risorse online,
+		nel ormai lontano 2023 nasce PranksterHouse.<br>
     </p>
 
     <blockquote>
         "La creatività è l'intelligenza che si diverte." – Albert Einstein
     </blockquote>
-
+	<img id="logo" src="miniatura.png" alt="Logo">
     <p>
-        Ecco un altro paragrafo per dimostrare come appare un testo aggiuntivo nel layout. 
-        Sperimenta con i tuoi contenuti per adattare il template alle tue esigenze.
+        Qui alcuni esempi di miniatura.
     </p>
 </div>
-<a href="../index.html" class="floating-home-btn" aria-label="Torna alla Home">🏠</a>
+<a href="../index.html" class="floating-home-btn" aria-label="Torna alla Home">💡</a>
 <footer>
     &copy; 2024 Mattia Casamenti. Tutti i diritti riservati.
 </footer>
+  <script>
+        // Seleziona l'immagine e il contenitore
+        const logo = document.getElementById('logo');
+        const container = document.querySelector('.contenitore');
+
+        // Dimensioni del contenitore e dell'immagine
+        const containerWidth = container.offsetWidth;
+        const containerHeight = container.offsetHeight;
+        const logoWidth = logo.offsetWidth;
+        const logoHeight = logo.offsetHeight;
+
+        // Posizione iniziale
+        let x = Math.random() * (containerWidth - logoWidth);
+        let y = Math.random() * (containerHeight - logoHeight);
+
+        // Velocità iniziale e fattore comune
+        let speedFactor = getRandomSpeedFactor(); // Fattore che controlla sia il movimento che la rotazione
+        let xSpeed = speedFactor; // Velocità orizzontale
+        let ySpeed = speedFactor; // Velocità verticale
+        let angle = 0; // Angolo iniziale
+        let angleSpeed = speedFactor * 0.5; // Rotazione proporzionale alla velocità (più lenta)
+
+        // Funzione per ottenere un fattore di velocità casuale
+        function getRandomSpeedFactor() {
+            return Math.random() * 2 + 1; // Valore casuale tra 1 e 3
+        }
+
+        // Funzione di aggiornamento posizione, velocità e rotazione
+        function updatePosition() {
+            // Aggiorna posizione
+            x += xSpeed;
+            y += ySpeed;
+
+            // Controlla collisione con i bordi
+            if (x <= 0 || x + logoWidth >= containerWidth) {
+                xSpeed *= -1; // Cambia direzione orizzontale
+                adjustSpeedsAndRotation(); // Cambia velocità e rotazione
+            }
+            if (y <= 0 || y + logoHeight >= containerHeight) {
+                ySpeed *= -1; // Cambia direzione verticale
+                adjustSpeedsAndRotation(); // Cambia velocità e rotazione
+            }
+
+            // Aggiorna angolo di rotazione
+            angle += angleSpeed;
+
+            // Applica nuove coordinate e rotazione
+            logo.style.left = `${x}px`;
+            logo.style.top = `${y}px`;
+            logo.style.transform = `rotate(${angle}deg)`;
+
+            // Richiama la funzione in modo ricorsivo per l'animazione
+            requestAnimationFrame(updatePosition);
+        }
+
+        // Funzione per cambiare velocità e rotazione casualmente
+        function adjustSpeedsAndRotation() {
+            speedFactor = getRandomSpeedFactor(); // Nuovo fattore di velocità
+            xSpeed = (xSpeed < 0 ? -1 : 1) * speedFactor; // Mantieni la direzione
+            ySpeed = (ySpeed < 0 ? -1 : 1) * speedFactor; // Mantieni la direzione
+            angleSpeed = speedFactor * 0.5; // Cambia velocità di rotazione (più lenta)
+        }
+
+        // Avvia l'animazione
+        updatePosition();
+    </script>
 
 </body>
 </html>

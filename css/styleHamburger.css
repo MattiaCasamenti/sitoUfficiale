@@ -1,7 +1,7 @@
 /* Hamburger Menu */
 .hamburger {
     position: absolute;
-    top: 30px;
+    margin-top: 30px;
     right: 25px;
     cursor: pointer;
     z-index: 1000;
@@ -54,17 +54,22 @@
 /* Trasformazione Hamburger in X */
 .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px); /* Rotazione e traslazione uniforme */
-    width: 55px; /* Assicurati che la larghezza sia consistente */
+    width: 65px; /* Assicurati che la larghezza sia consistente */
 }
 .hamburger.active .bar:nth-child(2) {
     opacity: 0; /* Nasconde la barra centrale */
 }
 .hamburger.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px); /* Rotazione e traslazione opposta */
-    width: 55px; /* Assicurati che la larghezza sia consistente */
+    width: 65px; /* Assicurati che la larghezza sia consistente */
 }
 /* Responsività */
-/* Responsività */
+@media (max-width: 1024px) {
+	.hamburger {
+    position: absolute;
+    margin-top: 20px;
+    
+}
 @media (max-width: 768px) {
 	.menu{
 		width: 100%;
@@ -87,9 +92,35 @@
 		
 	}
     .menu a {
-        font-size: 60px;
+        font-size: 30px;
 		border-bottom: 2px solid #555555; 
 		justify-content: center;
 		align-items: center;
     }
+	.hamburger {
+		position: absolute;
+		margin-top: 10px;
+		right: 25px;
+		cursor: pointer;
+		z-index: 1000;
+	}
+	.hamburger .bar {
+		width: 40px;
+		height: 5px;
+		background-color: #333333;
+		margin: 6px 0;
+		transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+	}
+	.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px); /* Rotazione e traslazione uniforme */
+    width: 40px; /* Assicurati che la larghezza sia consistente */
+	background-color: #fafafa;
+	}
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0; /* Nasconde la barra centrale */
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px); /* Rotazione e traslazione opposta */
+    width: 40px; /* Assicurati che la larghezza sia consistente */
+	background-color: #fafafa;
 }

@@ -68,3 +68,8 @@
 #email-form button:hover {
     background-color: #555;
 }
+@media screen and (max-width: 992px) {
+    .contact-options p:not(.email-option) {
+        display: none;
+    }
+}

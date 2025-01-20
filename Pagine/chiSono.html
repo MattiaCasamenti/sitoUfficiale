@@ -40,7 +40,7 @@
     
     <main class="container">
         <section class="intro">
-            <img src="https://via.placeholder.com/150" alt="La mia foto" class="profile-pic">
+            <img src="img/chiSono/profilo.jpg" alt="La mia foto" class="profile-pic">
             <h2>Ciao, sono Mattia Casamenti!</h2>
             <p>Sono un tecnico informatico appassionato di geografia, storia e content creation.</p>
         </section>
@@ -49,7 +49,7 @@
 			<p>Ho studiato presso l'Itis Nullo Baldini di Ravenna, nel mentre ho avuto modo di lavorare sia come cameriere, sia come stagista presso un'azienda sistemistica.</p>
 			<!-- Immagine con effetto sfumato -->
 			<div class="contenitore">
-				<img id="immagine" src="img/chiSono/itis.jpg" alt="Immagine" class="immagine" onclick="cambiaImmagine()">
+				<img id="immagine" src="img/chiSono/itis.jpg" alt="ImmagineITIS" class="immagine" onclick="cambiaImmagine()">
 			</div>
 		</section>
 
@@ -75,8 +75,10 @@
             <p>Credo nella costanza, nella dedizione e sono motivato dagli obiettivi che annualmente mi prefiggo.<br>La mia missione sta nel diventare la versione migliore di me stesso, migliorando nei vari aspetti della mia vita in maniera costante e sana.</p>
             
             <!-- SECONDA IMMAGINE -->
+			<h3>Origini</h3>
+			<p>Sono nato e cresciuto in Romagna, in particolare a Ravenna città davvero ricca di storia e cultura.<br>Città veramente fantastica, una via di mezzo tra una megalopoli e un semplice borgo, mi ha permesso di fare tante esperienze ed offre molte possibilità.
             <div class="contenitore3D">
-                <img src="../Immagini/chiSono/Ravenna-Stemma.png" class="img-assoluta3" alt="La mia foto" id="immagine3D" onclick="cambiaImmagine3D()">
+                <img src="img/chiSono/romagna.png" class="img-assoluta3" alt="La mia foto" id="immagine3D" onclick="cambiaImmagine3D()">
             </div>
         </section>
 
@@ -115,7 +117,7 @@
         
         <!-- TERZA IMMAGINE -->
         <section>
-            <img src="../Immagini/chiSono/Ravenna-Stemma.png" class="img-assoluta1" alt="Immagine finale" id="imgRotante">
+            <img src="img/chiSono/russian.jpeg" class="img-assoluta1" alt="Immagine finale" id="imgRotante">
         </section>
     </main>
 
@@ -142,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const img = document.getElementById("imgRotante");
 
   // Stato iniziale: immagine originale
-  const imgOriginale = "img/chiSono/itis.jpg";
+  const imgOriginale = "img/chiSono/russian.jpeg";
   const imgNuova = "img/chiSono/dannunzio.jpeg";
   let isNuova = false;
 
@@ -174,9 +176,9 @@ function cambiaImmagine() {
     // Cambia l'immagine dopo che l'effetto di fading out è completo
     setTimeout(function() {
         if (!immagineGirata) {
-            immagine.src = "../Immagini/chiSono/Galletto-Romagna.png";
+			immagine.src = "img/chiSono/scritta.png";
         } else {
-            immagine.src = "../Immagini/chiSono/Ravenna-Stemma.png";
+            immagine.src = "img/chiSono/itis.jpg";
         }
 
         // Inverti lo stato dell'immagine
@@ -198,9 +200,9 @@ let immagineGirata3D = false;
         // Cambia l'immagine a metà dell'animazione
         setTimeout(function () {
             if (!immagineGirata3D) {
-                immagine.src = "../Immagini/chiSono/Galletto-Romagna.png"; // Cambia all'immagine successiva
+                immagine.src = "img/chiSono/ravenna.png";
             } else {
-                immagine.src = "../Immagini/chiSono/Ravenna-Stemma.png"; // Torna all'immagine originale
+                immagine.src = "img/chiSono/romagna.png";
             }
 
             // Inverti lo stato
