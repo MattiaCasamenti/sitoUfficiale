@@ -9,41 +9,39 @@ body {
     font-family: Roboto, sans-serif;
 }
 h1 {
-	font-size: 60px;
+    font-size: 60px;
 }
 h2 {
-	font-size: 30px;
-
+    font-size: 30px;
 }
 p {
-	font-size: 30px;
-	font-family: Roboto;
+    font-size: 30px;
+    font-family: Roboto;
 }
 body.loaded {
     background-color: white;
 }
 img {
-	width: 90px;
-	height: 70px;
+    width: 90px;
+    height: 70px;
     margin-top: 30px;
 }
 hr {
-	width: 98%;
-	height: 1,5px;
-	background-color: gray;
+    width: 98%;
+    height: 1.5px;
+    background-color: gray;
 }
 .rotating-image {
     position: absolute;
-    top: 8.5vh; /* Mantiene l'immagine in alto */
-    right: 2vw; /* Sposta l'immagine verso il lato destro */
-    transform: translate(0, 0) rotate(0deg); /* Rimuoviamo il "-50%" per gestire meglio il posizionamento */
-    width: 10vw; /* Larghezza dinamica basata sulla viewport */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
-    animation: rotateInfinite 5s linear infinite; /* Animazione di rotazione */
-    z-index: -1; /* Posiziona l'immagine sotto le scritte */
-    transition: all 0.3s ease; /* Aggiunge transizioni fluide */
+    top: 8.5vh;
+    right: 2vw;
+    transform: translate(0, 0) rotate(0deg);
+    width: 10vw;
+    height: auto;
+    animation: rotateInfinite 5s linear infinite;
+    z-index: -1;
+    transition: all 0.3s ease;
 }
-/* Animazione della rotazione */
 @keyframes rotateInfinite {
     from {
         transform: translate(0, 0) rotate(0deg);
@@ -60,35 +58,9 @@ hr {
     font-size: 2.5em;
     background-color: #ffffff;
     padding: 20px;
-    border: 5px solid #b30000; /* Colore rosso porpora */
+    border: 5px solid #b30000;
     border-radius: 10px;
-    box-shadow: 0 4px 100px rgba(179, 0, 0, 0.3); /* Ombra in rosso porpora con opacità ridotta */
-}
-table {
-    position: absolute;
-    top: 1300px; /* Distanza dal bordo superiore */
-    right: 100px; /* Distanza dal bordo destro */
-    width: 700px; /* Larghezza fissa iniziale della tabella */
-    border-collapse: collapse; /* Per uno stile tabella pulito */
-}
-th, td {
-    font-size: 18px;
-    padding: 15px;
-    text-align: center;
-    width: 150px; 
-    word-break: break-word;
-}
-table tr:first-child {
-    background-color: #f2f2f2; /* Grigio chiaro */
-}
-.table-container table tr {
-    opacity: 0;
-    transform: translateX(-100%); /* Sposta fuori dalla vista a sinistra */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Animazione fluida */
-}
-.table-container table tr.visible {
-    opacity: 1;
-    transform: translateX(0); /* Riporta la riga nella posizione originale */
+    box-shadow: 0 4px 100px rgba(179, 0, 0, 0.3);
 }
 .button {
     position: relative;
@@ -104,8 +76,8 @@ table tr:first-child {
     overflow: hidden;
     cursor: pointer;
     transition: color 0.3s ease;
-  }
-  .button::before {
+}
+.button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -115,23 +87,23 @@ table tr:first-child {
     background: linear-gradient(to right, white, #b30000);
     transition: left 0.4s ease;
     z-index: 1;
-  }
-  .button:hover::before {
+}
+.button:hover::before {
     left: 0;
-  }
-  .button:hover {
+}
+.button:hover {
     color: white;
-  }
-  .button:active {
+}
+.button:active {
     background-color: #660000;
     border-color: #660000;
     color: white;
     transition: background-color 0.1s ease;
-  }
-  .button span {
+}
+.button span {
     position: relative;
     z-index: 2;
-  }
+}
 .contenitore {
     margin-top: 140px;
     margin-left: 120px;
@@ -141,37 +113,37 @@ table tr:first-child {
     margin-top: 140px;
     margin-left: 120px;
     max-width: 400px;
-	font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
 }
 .sottolineato {
-	text-decoration: underline; /* Applica la sottolineatura */
-	text-decoration-color: #b30000; /* Colore della sottolineatura */
+    text-decoration: underline;
+    text-decoration-color: #b30000;
 }
 .intestazione {
     margin-top: 1px;
-	margin-left:40px;
+    margin-left: 40px;
 }
 .intestazione img, .intestazione h2 {
     display: inline-block;
     vertical-align: middle;
 }
 .intestazione img {
-	width: 90px;
-	height: 50px;
-	margin-top: 1px;
-	}
+    width: 90px;
+    height: 50px;
+    margin-top: 1px;
+}
 .cerchio {
-    width: 40vw; /* Dimensioni relative alla larghezza della viewport */
-    height: 40vw; /* Mantieni il rapporto 1:1 per il cerchio */
-    max-width: 700px; /* Limita le dimensioni massime */
+    width: 40vw;
+    height: 40vw;
+    max-width: 700px;
     max-height: 700px;
     background-color: #E0E0E0;
     border-radius: 50%;
     position: absolute;
-    top: 25vh; /* Posizione relativa all'altezza della viewport */
-    right: 1vw; /* Posizione relativa alla larghezza della viewport */
+    top: 25vh;
+    right: 1vw;
     z-index: -1;
-    transition: all 0.3s ease; /* Per animare eventuali cambiamenti */
+    transition: all 0.3s ease;
 }
 .riquadro {
     background-color: black;
@@ -180,195 +152,147 @@ table tr:first-child {
     margin-left: 20px;
     height: 50px;
     width: 200px;
-    border-radius: 15px; /* Arrotonda gli angoli */
-    display: flex; /* Imposta un layout flessibile */
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .riquadro2 {
     background-color: black;
     color: white;
-	margin-top: 50px;
+    margin-top: 50px;
     height: 50px;
     width: 200px;
-    border-radius: 15px; /* Arrotonda gli angoli */
-    display: flex; /* Imposta un layout flessibile */
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
-}
-@media (max-width: 280px){
-	table {
-    position: absolute;
-	top: 900px!important;
-    width: 40vw!important;
-    left: 20%;
-    transform: translateX(-50%);
-	}
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media (max-width: 480px) {
-	.intestazione img {
-		width: 30px;
-		height: 20px;
-		margin-top: 10px;
-	}
-	.cerchio{
-		display: none;
-	}
-	.rotating-image{
-		display: none;
-	}
-	.intestazione h2{
-		display: none;
-	}
-	.contenitore{
-		margin-left: 0px;
-		margin-top: 5px!important;
-		margin-bottom: 5px;
-	}
-	.contenitore h1{
-		font-size: 30px!important;
-	}
-	.contenitore p.ciao{
-		display: none;
-	}
-	table {
-    position: absolute;
-	top: 1050px!important;
-    width: 40vw!important;
-    left: 20%;
-    transform: translateX(-50%);
-	}
-	th, td {
-    font-size: 5vw!important;
-    padding: 0.5vw!important;
-    text-align: center;
-	}
+    .intestazione img {
+        width: 30px;
+        height: 20px;
+        margin-top: 10px;
+    }
+    .cerchio {
+        display: none;
+    }
+    .rotating-image {
+        display: none;
+    }
+    .intestazione h2 {
+        display: none;
+    }
+    .contenitore {
+        margin-left: 0px;
+        margin-top: 5px !important;
+        margin-bottom: 5px;
+    }
+    .contenitore h1 {
+        font-size: 30px !important;
+    }
+    .contenitore p.ciao {
+        display: none;
+    }
+    .citazione {
+        margin-top: 200px;
+        margin-bottom: 80px;
+        font-size: 1.5em;
+        padding: 15px;
+    }
 }
 @media (max-width: 768px) {
-	.cerchio{
-		display: none;
-	}
-	.rotating-image{
-		width: 80px;
-		height: auto;
-	}
-	.intestazione{
-		margin-left: 2px;
-	}
-	.intestazione img {
-		width: 30px;
-		height: 20px;
-		margin-top: 1px;
-	}
-	.intestazione h2{
-		font-size: 20px;
-	}
-	.contenitore{
-	margin-top: 40px;
-    margin-left: 30px;
-    max-width: 1000px;
-	text-align: center;
-	}
-	.contenitore2{
-		margin-bottom: 5px;
-	}
-	.contenitore2  h1{
-		margin-top: 10px;
-	}
-	.contenitore h2{
-		display: none;
-	}
-	.contenitore p{
-		font-size: 25px;
-	}
-	.contenitore h1{
-		font-size: 25px;
-	}
-	.contenitore2{
-		margin-bottom: 0px;
-	}
-	table {
-    margin-top: 5px;
-    position: relative;
-    width: 60vw!important;
-    left: 50%;
-    transform: translateX(-50%);
-	}
-	th, td {
-    font-size: 22px;
-    padding: 5px;
-    text-align: center;
-	}
-	.table-container table tr {
-		opacity: 0;
-		transform: translateX(-50%); /* Sposta fuori dalla vista a sinistra */
-		transition: opacity 0.6s ease, transform 0.6s ease; /* Animazione fluida */
-	}
-	.citazione {
-    margin-top: 200px;
-    margin-bottom: 80px;
-    font-size: 1.5em;
-    padding: 15px;
-	}
+    .cerchio {
+        display: none;
+    }
+    .rotating-image {
+        width: 80px;
+        height: auto;
+    }
+    .intestazione {
+        margin-left: 2px;
+    }
+    .intestazione img {
+        width: 30px;
+        height: 20px;
+        margin-top: 1px;
+    }
+    .intestazione h2 {
+        font-size: 20px;
+    }
+    .contenitore {
+        margin-top: 40px;
+        margin-left: 30px;
+        max-width: 1000px;
+        text-align: center;
+    }
+    .contenitore2 {
+        margin-bottom: 5px;
+    }
+    .contenitore2 h1 {
+        margin-top: 10px;
+    }
+    .contenitore h2 {
+        display: none;
+    }
+    .contenitore p {
+        font-size: 25px;
+    }
+    .contenitore h1 {
+        font-size: 25px;
+    }
+    .contenitore2 {
+        margin-bottom: 0px;
+    }
+    .citazione {
+        margin-bottom: 100px;
+    }
 }
 @media (max-width: 1024px) {
-	.rotating-image{
-		width: 100px;
-		height: auto;
-	}
-   .intestazione img {
-	width: 60px;
-	height: 40px;
-	margin-top: 1px;
-	}
-	.intestazione h2{
-		font-size: 25px;
-	}
-	.contenitore h1{
-		 font-size: 50px;
-	}
-	.contenitore{
-		margin-top: 60px;
-	}
-	hr {
-		margin-top: 10px;
-		width: 98%;
-		height: 2,5px;
-		background-color: gray;
-	}
-	.contenitore2{
-		margin-top: 10px;
-		margin-left: 80px;
-		max-width: 1000px;
-		margin-bottom: 400px;
-	}
-	.contenitore2 div {
-		display: none;
-	}
-	.contenitore2 h1{
-		font-size: 7vw;
-	}
-	table {
-		margin-top: 10px;
-		position: relative;
-		margin-top:5px;
-		width: 60vw!important;
-		right: 200px!important;
-	}
-	.citazione {
-		margin-bottom: 100px;
-	}
+    .rotating-image {
+        width: 100px;
+        height: auto;
+    }
+    .intestazione img {
+        width: 60px;
+        height: 40px;
+        margin-top: 1px;
+    }
+    .intestazione h2 {
+        font-size: 25px;
+    }
+    .contenitore h1 {
+        font-size: 50px;
+    }
+    .contenitore {
+        margin-top: 60px;
+    }
+    hr {
+        margin-top: 10px;
+        width: 98%;
+        height: 2.5px;
+        background-color: gray;
+    }
+    .contenitore2 {
+        margin-top: 10px;
+        margin-left: 80px;
+        max-width: 1000px;
+        margin-bottom: 400px;
+    }
+    .contenitore2 div {
+        display: none;
+    }
+    .contenitore2 h1 {
+        font-size: 7vw;
+    }
+    .citazione {
+        margin-bottom: 100px;
+    }
 }
 @media (max-width: 1440px) {
-	.cerchio{
-		display: none;
-	}
-	table {
-		position: absolute;
-		top: 1300px;
-		right: 30px; 
-		width: 50vw; 
-	}
+    .cerchio {
+        display: none;
+    }
 }
 
 

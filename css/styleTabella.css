@@ -1,0 +1,86 @@
+table {
+    position: absolute;
+    top: 1300px; /* Posizione iniziale per schermi grandi */
+    right: 100px;
+    width: 700px; /* Larghezza fissa iniziale */
+    border-collapse: collapse; /* Per uno stile tabella pulito */
+    transition: all 0.3s ease; /* Transizioni fluide */
+}
+
+th, td {
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    width: 150px;
+    word-break: break-word;
+}
+
+table tr:first-child {
+    background-color: #f2f2f2; /* Grigio chiaro */
+}
+
+.table-container table tr {
+    opacity: 0;
+    transform: translateX(-100%); /* Sposta fuori dalla vista a sinistra */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animazione fluida */
+}
+
+.table-container table tr.visible {
+    opacity: 1;
+    transform: translateX(0); /* Riporta la riga nella posizione originale */
+}
+
+/* Media Query per schermi piccoli */
+@media (max-width: 1024px) {
+    table {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 80vw; /* Adatta la larghezza */
+        margin: 0 auto; /* Centra la tabella */
+    }
+    th, td {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+		position: absolute;
+		top: 1350px;
+        width: 90vw; /* Larghezza più piccola */
+        margin: 10px auto; 
+        
+    }
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .table-container table tr {
+        opacity: 0;
+        transform: translateX(-50%); /* Sposta meno lontano fuori dalla vista */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        width: 100%; /* Usa tutta la larghezza disponibile */
+        margin: 20px auto; /* Margine superiore e inferiore */
+    }
+    th, td {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 280px) {
+    table {
+        width: 100%; /* Stessa regola per schermi ultra piccoli */
+        margin: 10px auto;
+    }
+    th, td {
+        font-size: 10px;
+        padding: 4px;
+    }
+}

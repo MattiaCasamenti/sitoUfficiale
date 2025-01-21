@@ -1,7 +1,7 @@
 /* Stile generale del footer */
 .footer {
     background-color: #1a1a1a;
-	height: 150px;
+	height: 80px;
     padding: 20px; /* Riduce il padding per diminuire le dimensioni del footer */
     color: white;
     display: flex;
@@ -13,7 +13,7 @@
     color: white; /* Colore del testo iniziale */
     text-decoration: none;
     font-size: 20px;
-    margin-bottom: 5px; /* Spazio tra i link e le informazioni aziendali */
+    margin-bottom: 5px; /* Spazio t8 i link e le informazioni aziendali */
     display: block;
 }
 .page-link:hover {
