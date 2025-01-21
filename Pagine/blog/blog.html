@@ -7,17 +7,26 @@
   <title>I miei Progetti</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="../blog">I Miei Progetti</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarContent" 
+      aria-controls="navbarContent" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto me-2">
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="../../index.html">Home</a>
         </li>
@@ -31,72 +40,85 @@
           <a class="nav-link" href="../conoscimiMeglio.html">Conoscimi Meglio</a>
         </li>
       </ul>
-      <!-- Barra di Ricerca -->
+      <!-- Barra di ricerca -->
       <form class="d-flex" role="search">
-        <input id="searchInput" class="form-control me-2" type="search" placeholder="Cerca articoli..." aria-label="Search">
+        <input 
+          id="searchInput" 
+          class="form-control me-2" 
+          type="search" 
+          placeholder="Cerca articoli..." 
+          aria-label="Search">
       </form>
     </div>
   </div>
 </nav>
 
   <!-- Sezione Articoli -->
- <div class="container my-4">
-  <!-- Campo di Ricerca -->
-
-  <!-- Le Card -->
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="cardContainer">
-    <div class="col">
-      <div class="card h-100">
-        <img src="../../Immagini/progetti/Prankster.png" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Articolo 1">
-        <div class="card-body">
-          <h5 class="card-title">PrankSterHouse</h5>
-          <p class="card-text">Primo canale YouTube faceless</p>
-          <a href="articles/prankSter.html" class="btn btn-primary">Vai al progetto</a>
+  <div class="container my-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="cardContainer">
+      <div class="col">
+        <div class="card h-100">
+          <img src="../../Immagini/progetti/Prankster.png" class="card-img-top w-100" style="height: 300px; object-fit: cover;" alt="Articolo 1">
+          <div class="card-body">
+            <h5 class="card-title">PrankSterHouse</h5>
+            <p class="card-text">Primo canale YouTube faceless</p>
+            <a href="articles/prankSter.html" class="btn btn-primary">Vai al progetto</a>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Altre Card -->
-    <div class="col">
-      <div class="card h-100">
-        <img src="articolo2.jpg" class="card-img-top" alt="Articolo 2">
-        <div class="card-body">
-          <h5 class="card-title">Titolo Articolo 2</h5>
-          <p class="card-text">Breve descrizione dell'articolo 2.</p>
-          <a href="articolo2.html" class="btn btn-primary">Leggi l'articolo</a>
+      <div class="col">
+        <div class="card h-100">
+          <img src="articolo2.jpg" class="card-img-top" alt="Articolo 2">
+          <div class="card-body">
+            <h5 class="card-title">Titolo Articolo 2</h5>
+            <p class="card-text">Breve descrizione dell'articolo 2.</p>
+            <a href="articolo2.html" class="btn btn-primary">Leggi l'articolo</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <p>© 2024 Mattia Casamenti. Tutti i diritti riservati.</p>
   </footer>
-<a href="../../index.html" class="floating-home-btn" aria-label="Torna alla Home">🏠</a>
-  <!-- Bootstrap JS -->
+  <a href="../../index.html" class="floating-home-btn" aria-label="Torna alla Home">🏠</a>
+
+  <!-- JavaScript -->
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("searchInput");
-    const cardContainer = document.getElementById("cardContainer");
-    const cards = cardContainer.getElementsByClassName("col");
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("searchInput");
+      const cardContainer = document.getElementById("cardContainer");
+      const cards = cardContainer.getElementsByClassName("col");
 
-    // Aggiungi un evento per il campo di ricerca
-    searchInput.addEventListener("input", function () {
-      const filter = searchInput.value.toLowerCase();
-
-      Array.from(cards).forEach(function (card) {
-        const title = card.querySelector(".card-title").textContent.toLowerCase();
-        const text = card.querySelector(".card-text").textContent.toLowerCase();
-
-        // Mostra o nascondi le card in base al filtro
-        if (title.includes(filter) || text.includes(filter)) {
-          card.style.display = ""; // Mostra la card
-        } else {
-          card.style.display = "none"; // Nasconde la card
-        }
+      // Aggiungi un evento per il campo di ricerca
+      searchInput.addEventListener("input", function () {
+        const filter = searchInput.value.toLowerCase();
+        Array.from(cards).forEach(function (card) {
+          const title = card.querySelector(".card-title").textContent.toLowerCase();
+          const text = card.querySelector(".card-text").textContent.toLowerCase();
+          if (title.includes(filter) || text.includes(filter)) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
       });
     });
+	document.addEventListener("DOMContentLoaded", function () {
+    // Aggiunge la classe fade-in agli elementi con classe 'card'
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.2}s`; // Ritardo tra le card
+      card.classList.add("fade-in");
+    });
+
+    // Fade-in anche per il resto del contenuto
+    const navbar = document.querySelector(".navbar");
+    const footer = document.querySelector("footer");
+    navbar.classList.add("fade-in");
+    footer.classList.add("fade-in");
   });
   </script>
 </body>
