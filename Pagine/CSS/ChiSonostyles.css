@@ -256,7 +256,8 @@ footer {
     }
 
     .profile-pic {
-        width: 120px; /* Riduce la dimensione dell'immagine */
+        width: 100px; /* Riduci la larghezza */
+        height: 100px; /* Riduci l'altezza */
     }
 }
 
@@ -280,7 +281,7 @@ footer {
     }
 
     .profile-pic {
-        width: 200px; /* Ulteriore riduzione della dimensione */
-		height: 200px;
+        width: 80px; /* Ulteriore riduzione */
+        height: 80px;
     }
 }

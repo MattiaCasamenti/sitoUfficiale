@@ -1,15 +1,30 @@
-/* Generale */
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Grigio chiaro */
+    background-color: #f9f9f9; /* Sfondo grigio chiaro */
     color: #333; /* Testo scuro */
     overflow-x: hidden; /* Evita scroll orizzontale per animazioni */
     line-height: 1.6;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Assicura che l'altezza copra l'intero viewport */
+}
+
+/* Main deve espandersi per spingere il footer in basso */
+main {
+    flex: 1; /* Riempie lo spazio disponibile sopra il footer */
+}
+
+/* Footer fisso in fondo */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+    border-top: 1px solid #333;
+    width: 100%; /* Occupa tutta la larghezza */
 }
 
 header {
@@ -105,18 +120,6 @@ main {
 }
 
 /* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: #fff;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9rem;
-    border-top: 1px solid #333;
-}
-
 footer a {
     color: #0077b5;
     text-decoration: none;
@@ -162,34 +165,111 @@ footer a:hover {
 }
 .floating-home-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: white;
-    color: white;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    bottom: 20px; /* Sempre 20px dal fondo */
+    right: 20px; /* Sempre 20px dal bordo destro */
+    background-color: #fff; /* Sfondo bianco */
+    color: #111; /* Testo scuro */
+    border-radius: 50%; /* Pulsante rotondo */
+    width: 60px; /* Dimensione del pulsante */
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     font-size: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.2s;
-    z-index: 1000; /* Sopra gli altri elementi */
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Sempre sopra gli altri elementi */
 }
 
 .floating-home-btn:hover {
-    background-color: #b30000;
-    transform: scale(1.1);
+    background-color: #b30000; /* Cambia colore al passaggio del mouse */
+    transform: scale(1.1); /* Effetto ingrandimento */
 }
-@media (max-width: 768px) {
-    .floating-home-btn {
-		right: 50px;
-		bottom: 20px;
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
+@media (max-width: 1024px) {
+    header {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem; /* Riduci leggermente la dimensione del titolo */
+    }
+
+    p {
+        font-size: 0.95rem; /* Testo un po' più piccolo */
+    }
+
+    .social-section {
+        gap: 15px; /* Riduci la spaziatura tra le card */
+    }
+
+    .social-card {
+        width: 300px; /* Riduci la larghezza delle card */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Testo più piccolo per il footer */
     }
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Dimensione più compatta del titolo */
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .social-section {
+        flex-direction: column; /* Disposizione verticale delle card */
+        align-items: center; /* Centra le card */
+    }
+
+    .social-card {
+        width: 100%; /* Le card occupano tutta la larghezza disponibile */
+        max-width: 360px; /* Imposta una larghezza massima */
+    }
+
+    footer {
+        padding: 15px; /* Riduci il padding del footer */
+    }
+
+    .floating-home-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        bottom: 15px; /* Margine più piccolo per dispositivi mobili */
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Titolo ancora più compatto */
+    }
+
+    p {
+        font-size: 0.85rem; /* Riduzione ulteriore del testo */
+    }
+
+    .social-card {
+        width: 90%; /* Le card occupano quasi tutta la larghezza */
+    }
+
+    .floating-home-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        bottom: 10px;
+        right: 10px;
+    }
+}
