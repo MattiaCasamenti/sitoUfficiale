@@ -7,6 +7,10 @@ body {
     transition: background-color 1s ease;
     color: black;
     font-family: Roboto, sans-serif;
+	cursor: url('../cursore.cur'), auto;
+}
+body.clicked {
+    cursor: url('../cursore2.cur'), auto;
 }
 h1 {
     font-size: 60px;
@@ -74,7 +78,7 @@ hr {
     border: 4px solid #333;
     background-color: white;
     overflow: hidden;
-    cursor: pointer;
+    cursor: url('../cursore2.cur'), auto;
     transition: color 0.3s ease;
 }
 .button::before {
@@ -183,10 +187,8 @@ hr {
     .intestazione h2 {
         display: none;
     }
-    .contenitore {
-        margin-left: 0px;
-        margin-top: 5px !important;
-        margin-bottom: 5px;
+	.contenitore2 {
+        margin-bottom: 5px !important;
     }
     .contenitore h1 {
         font-size: 30px !important;
@@ -277,7 +279,7 @@ hr {
         margin-top: 10px;
         margin-left: 80px;
         max-width: 1000px;
-        margin-bottom: 400px;
+        margin-bottom: 0px !important;
     }
     .contenitore2 div {
         display: none;

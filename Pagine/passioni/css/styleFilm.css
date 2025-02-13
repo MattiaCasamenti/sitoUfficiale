@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.5s ease-in-out;
+}
+
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.floating-home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000;
+}
+
+.floating-home-btn:hover {
+    background-color: #b30000;
+    transform: scale(1.1);
+}
+
+.film-list {
+    list-style: none;
+    padding: 0;
+}
+
+.film-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    background: #1c1c1c;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    transition: background 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.film-item:hover {
+    background: linear-gradient(90deg, #2b3e50, #48657f);
+    transform: scale(1.05);
+}
+
+.film-item img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.film-info {
+    flex: 1;
+}
+
+.film-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.film-description {
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    img {
+        width: 300px;
+    }
+}
+
+.film-list-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+.film-card {
+    background: #222;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.film-card img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.film-card:hover {
+    transform: scale(1.1);
+    background: #333;
+}
+
+/* COMMEDIA */
+.film-item-comedy {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(90deg, #ffcc70, #ff9a3c); /* Arancione caldo */
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+    border: 1px solid #ff8000;
+}
+
+.film-item-comedy img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.film-item-comedy .film-info {
+    color: #222;
+}
+
+.film-item-comedy:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ffb347, #ff7e5f);
+    box-shadow: 0px 5px 15px rgba(255, 165, 0, 0.5);
+}
+
+.film-item-comedy .film-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.film-item-comedy .film-description {
+    font-size: 0.9em;
+}
+/* THRILLER */
+.film-item-thriller {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(90deg, #1c1c1c, #2e3a46); /* Blu scuro e grigio */
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+    border: 1px solid #2b3e50;
+}
+
+.film-item-thriller img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.film-item-thriller .film-info {
+    color: #ddd;
+}
+
+.film-item-thriller:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #2e3a46, #4f6b7a);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.film-item-thriller .film-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.film-item-thriller .film-description {
+    font-size: 0.9em;
+}
