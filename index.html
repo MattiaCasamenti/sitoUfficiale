@@ -1,233 +1,142 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-	<!-- FONT e Caratteri -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-	<!-- Collegamenti CSS -->
-	<link rel="stylesheet" href="css/styleHamburger.css">
-	<link rel="stylesheet" href="css/styleArticoli.css">
-	<link rel="stylesheet" href="css/styleEmail.css">
-	<link rel="stylesheet" href="css/styleParallelogramma.css">
-	<link rel="stylesheet" href="css/styleMostra.css">
-	<link rel="stylesheet" href="css/styleFooter.css">
-	<link rel="stylesheet" href="css/styleTabella.css">
-	<link rel="stylesheet" href="css/styleMain.css">
-	
-    <title>Mattia Casamenti - Autodidatta</title>
-</head> 	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AIUTOOOOOOOO - EXTREME EDITION</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Moonrocks&family=Zen+Tokyo+Zoo&family=Creepster&family=Eater&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-									<!-- Hamburger -->
-<div id="home"></div>
-<div class="hamburger" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-</div>
-<div id="menu" class="menu">
-    <a href="Pagine/chiSono.html">CHI SONO</a>
-    <a href="CurriculumCasamentiMattia.pdf" download="Curriculum_Casamenti_Mattia.pdf">CURRICULUM</a>
-    <a href="Pagine/social.html">I MIEI CANALI</a>
-    <a href="Pagine/blog/blog.html">I MIEI PROGETTI</a>
-    <a href="Pagine/conoscimiMeglio.html">CONOSCIMI MEGLIO</a>
-</div>
-									<!-- Pre-Linea -->
-<div class="intestazione">
-    <img src="Immagini/logo.png" alt="Logo">
-    <h2>Mattia Casamenti</h2>	
-</div>
-<hr></hr>
-									<!-- Immagine-->
-<img src="Immagini/Stellone_d'Italia.svg.png" alt="Stellone d'Italia" class="rotating-image">
-									<!-- Scritte -->
-<div class="contenitore">
-    <p>Ciao a tutti, il mio nome è <b>Mattia</b>!</p>
-    <h1>Sono un giovane ragazzo <br>motivato a fare esperienze, imparare e mettermi alla prova!</h1>
-    <h2 style="color:#b30000;">--- </h2>
-    <p class="ciao">Cliccando il bottone qui sotto potrai vedere i modi per contattarmi</p>
-    <a href="Pagine/social.html" class="button"><span>Contattami</span></a>
-</div>
-<div class="cerchio"></div>
-<!-- Parallelogramma -->
-<div class="parallelogram">
-    <div class="part part1">
-        <img src="Immagini/Ravenna.jpg" alt="Foto 1">
-    </div>
-    <div class="part part2">
-            <img src="Immagini/Computer.jpeg" alt="Foto 2">
-    </div>
-    <div class="part part3">
-        <img src="Immagini/Lavoro.jpg" alt="Foto 3">
-    </div>
-</div>
-<!-- Seconda schermata con Tabella-->
-<div class="contenitore2">
-	<div class="riquadro">RISULTATI</div>
-	<h1 class="sottolineato">Non sono solo numeri</h1>
-</div>
-<div class="table-container">
-	<table>
-		<tr>
-			<th>Social</th>
-			<th>Subscribers</th>
-			<th>Link</th>
-		</tr>
-		<tr>
-			<th>Youtube</th>
-			<th>20</th>
-			<th><a href="https://www.youtube.com/@MattiaCasamenti" target="_blank">Vai al canale →</a></th>
-		</tr>
-		<tr>
-			<th>Instagram</th>
-			<th>56</th>
-			<th><a href="https://www.instagram.com/mattia_casaaa/?utm_source=qr#" target="_blank">Vai al profilo →</a></th>
-		</tr>
-		<tr>
-			<th>TikTok</th>
-			<th>241</th>
-			<th><a href="https://www.tiktok.com/@drawcasa" target="_blank">Vai a DrawCasa →</th>
-		</tr>
-	</table>
-</div>
-<div class="citazione" id="citazione">Caricamento citazione...</div>
-<!-- Sezione Blog Ampliata -->
-<div class="contenitore-blog">
-    <h2>I miei Progetti</h2>
-    <p>Vuoi vedere tutto quello che ho compiuto negli <b>anni?<b></p>
-    <!-- Link alla pagina del blog -->
-    <div class="articoli-grid">
-        <div class="articolo">
-            <img src="Immagini/progetti/Prankster.png" alt="Articolo 1">
-            <h3>PranksterHouse - il mio primo canale YouTube</h3>
-            <p>Errori fatti, calcoli sbagliati e consigli utili per chi magari cerca di iniziare un percorso su YouTube</p>
-            <a href="Pagine/blog/articles/prankSter.html" class="pulsante-articolo">Leggi di più</a>
-        </div>
-		<!--
-        <div class="articolo">
-            <img src="Immagini/progetti/SitoWeb.jpg" alt="Articolo 2">
-            <h3>Sito Web Portfolio Professionale</h3>
-            <p>Racconto la realizzazione di questo sito: strumenti utilizzati, lezioni imparate e la mia documentazione su YouTube</p>
-            <a href="#" class="pulsante-articolo">Leggi di più</a>
-        </div>
-        <div class="articolo">
-            <img src="Immagini/progetti/Lego.jpg" alt="Articolo 3">
-            <h3>DataBase personalizzato per le minifigures LEGO</h3>
-            <p>In questo articolo espongo tutti i passaggi che ho fatto per realizzare un database con MySQL</p>
-            <a href="#" class="pulsante-articolo">Leggi di più</a>
-        </div>
-		-->
-	</div>
-		<!-- Pulsante per visualizzare più articoli -->
-	<div class="blog-more">
-		<a href="Pagine/blog/blog.html" class="button"><span>Vai ai miei progetti</span></a>
-	</div>
-</div>
-<!-- MAIL/SECONDA AREA PARALLASSE -->
-<div class="parallax-section">
-    <h1>Vuoi parlare subito con<br />me?</h1>
-    <div class="contact-options">
-        <p>Se sei un'azienda o un libero professionista e desideri scambiare qualche parola con me</p>
-        <p class="email-option">Scrivimi una Mail <span class="arrow" onclick="showEmailForm()">&#8594;</span></p>
-    </div>
 
-    <!-- Questo è il form nascosto inizialmente, verrà mostrato cliccando sulla freccia -->
-    <form id="email-form" class="hidden-email-form" action="mailto:mattiacasamenti666@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Il tuo nome" required>
-        <input type="email" name="email" placeholder="La tua email" required>
-        <textarea name="message" placeholder="Scrivi il tuo messaggio qui..." required></textarea>
-        <button type="submit">Invia</button>
-    </form>
-</div>
-<div class="footer">
-    <!-- Link "Home" e "Chi Siamo" -->
-    <div class="company-info">
-        <a href="#home" class="page-link">Home</a>
-        <a href="Pagine/chiSono.html" class="page-link">Chi Sono</a>
-    </div>
+  <!-- Container principale con gestione overflow -->
+  <div class="freak-container">
+    <!-- Immagini principali con z-index controllato -->
+    <div class="floating-img zoomy" style="top: 5vh; left: 5vw; background-image: url('img1.jpg'); z-index: 3;"></div>
+    <div class="rotating-img glitch" style="top: 30vh; left: 70vw; background-image: url('img2.jpg'); z-index: 2;"></div>
+    <div class="bouncing-img fadey" style="top: 10vh; left: 30vw; background-image: url('img3.jpg'); z-index: 4;"></div>
+    <div class="floating-img zoomy" style="top: 60vh; left: 30vw; background-image: url('img4.jpg'); z-index: 1;"></div>
+    <div class="rotating-img fadey" style="top: 10vh; left: 50vw; background-image: url('img5.jpg'); z-index: 5;"></div>
+    
+    <!-- Nuove immagini con animazioni speciali -->
+    <div class="floating-img vortex" style="top: 20vh; left: 20vw; background-image: url('img6.jpg'); z-index: 6;"></div>
+    <div class="broken-img" style="top: 40vh; left: 60vw; background-image: url('img7.jpg'); z-index: 7;"></div>
+    <div class="holographic-img" style="top: 70vh; left: 40vw; background-image: url('img8.jpg'); z-index: 8;"></div>
+    
+    <!-- Testi principali con boundary check -->
+    <div class="weird-text glitch boundary-check" style="top: 10vh; left: 10vw; z-index: 10;">CHE IL DIAVOLO MI PORTI!</div>
+    <div class="other-text zoomy boundary-check" style="top: 70vh; left: 80vw; z-index: 11;">Il senso della vita? Eccolo!</div>
+    <div class="weird-text fadey boundary-check" style="top: 50vh; left: 40vw; z-index: 9;">LA STORIA è SOGGETTIVA?!?</div>
+    <div class="other-text glitch boundary-check" style="top: 20vh; left: 60vw; z-index: 12;">Ignoranza è libertà.</div>
+    
+    <!-- Nuovi testi con animazioni speciali e boundary check -->
+    <div class="creepy-text boundary-check" style="top: 30vh; left: 30vw; z-index: 13;">NON PUOI SFUGGIRE</div>
+    <div class="noise-text boundary-check" style="top: 80vh; left: 20vw; z-index: 14;">01010100 01101001 00100000 01110100 01110010 01101111 01110110 01101001</div>
+    <div class="blood-text boundary-check" style="top: 10vh; left: 80vw; z-index: 15;">TUTTO È VERO</div>
+  </div>
 
-    <!-- Icone Social in basso a destra -->
-    <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100069149842017" target="_blank"><img src="Immagini/facebook.png" alt="Facebook"></a>
-        <a href="https://www.youtube.com/@MattiaCasamenti" target="_blank"><img src="Immagini/youtube.png" alt="YouTube"></a>
-        <a href="https://www.instagram.com/mattia_casaaa/?utm_source=qr#" target="_blank"><img src="Immagini/instagram.png" alt="Instagram"></a>
-        <a href="https://linkedin.com" target="_blank"><img src="Immagini/linkedin.png" alt="LinkedIn"></a>
-    </div>
-</div>
-<!-- Funzioni-->
-    <script>
-<!-- Hamburger Menu-->
-	function toggleMenu() {
-    const menu = document.getElementById("menu");
-    const hamburger = document.querySelector('.hamburger');
-    menu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-}
-    <!-- Scroll scomparsa parallelogramma-->
-		window.addEventListener('scroll', function() {
-            const parallelogram = document.querySelector('.parallelogram');
-            const parts = document.querySelectorAll('.part');
-            const windowHeight = window.innerHeight;
-            const parallelogramPosition = parallelogram.getBoundingClientRect().top;
+  <!-- Sfondo separato per non influenzare gli elementi -->
+  <div class="background-layer"></div>
 
-            if (parallelogramPosition < windowHeight) {
-                parallelogram.classList.add('visible');
-                parts.forEach(part => part.classList.add('visible'));
-            }
-        });
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
-        });	
-		document.addEventListener("DOMContentLoaded", () => {
-    const rows = document.querySelectorAll(".table-container table tr");
-    // Funzione per mostrare le righe della Tabella
-    const showRows = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-    const observer = new IntersectionObserver(showRows, {
-        root: null, // Usa la finestra come viewport
-        threshold: 0.1, // Rileva quando il 10% della riga è visibile
+  <script>
+    // Immagini dinamiche con boundary check
+    const dynamicImages = 8; // Ridotto per evitare sovraffollamento
+    const anims = ["zoomy", "glitch", "fadey", "vortex", "broken"];
+    const positions = [
+      {top: "15vh", left: "25vw"},
+      {top: "45vh", left: "75vw"},
+      {top: "75vh", left: "15vw"},
+      {top: "25vh", left: "45vw"},
+      {top: "55vh", left: "85vw"},
+      {top: "85vh", left: "55vw"},
+      {top: "35vh", left: "35vw"},
+      {top: "65vh", left: "65vw"}
+    ];
+    
+    for (let i = 0; i < dynamicImages; i++) {
+      const img = document.createElement('div');
+      img.className = `dynamic-img ${anims[i % anims.length]} boundary-check`;
+      img.style.backgroundImage = `url('img${i + 9}.jpg')`;
+      img.style.top = positions[i].top;
+      img.style.left = positions[i].left;
+      img.style.zIndex = i + 1;
+      document.querySelector('.freak-container').appendChild(img);
+    }
+
+    // Testi dinamici con boundary check
+    const creepyPhrases = [
+      "GUARDA PIÙ IN ALTO",
+      "NON È REALE",
+      "SEI SOLO?",
+      "L'ORA È TARDA",
+      "NON FIDARTI",
+      "CHI SEI VERAMENTE?",
+      "TUTTO È CONNESSO",
+      "IL BUIO ARRIVA"
+    ];
+    
+    for (let i = 0; i < 4; i++) { // Ridotto il numero
+      const text = document.createElement('div');
+      text.className = `dynamic-text ${i % 2 === 0 ? 'creepy-text' : 'noise-text'} boundary-check`;
+      text.textContent = creepyPhrases[Math.floor(Math.random() * creepyPhrases.length)];
+      
+      // Posizionamento sicuro con boundary check
+      const safeTop = Math.min(Math.max(Math.random() * 80, 10), 70);
+      const safeLeft = Math.min(Math.max(Math.random() * 80, 10), 70);
+      
+      text.style.top = `${safeTop}vh`;
+      text.style.left = `${safeLeft}vw`;
+      text.style.zIndex = 20 + i;
+      document.querySelector('.freak-container').appendChild(text);
+    }
+
+    // Cambio colore sfondo più soft
+    const bgColors = [
+      "#111111", "#1a1a1a", "#222222", 
+      "#2a2a2a", "#333333", "#3a3a3a"
+    ];
+    let colorIndex = 0;
+    setInterval(() => {
+      document.querySelector('.background-layer').style.backgroundColor = bgColors[colorIndex];
+      colorIndex = (colorIndex + 1) % bgColors.length;
+    }, 5000);
+
+    // Boundary check per elementi che escono dallo schermo
+    function checkBoundaries() {
+      document.querySelectorAll('.boundary-check').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.right > window.innerWidth) {
+          el.style.left = `${parseFloat(el.style.left) - (rect.right - window.innerWidth + 20)}px`;
+        }
+        if (rect.left < 0) {
+          el.style.left = `${parseFloat(el.style.left) + (Math.abs(rect.left) + 20)}px`;
+        }
+        if (rect.bottom > window.innerHeight) {
+          el.style.top = `${parseFloat(el.style.top) - (rect.bottom - window.innerHeight + 20)}px`;
+        }
+        if (rect.top < 0) {
+          el.style.top = `${parseFloat(el.style.top) + (Math.abs(rect.top) + 20)}px`;
+        }
+      });
+    }
+
+    // Esegui boundary check al resize e al load
+    window.addEventListener('load', checkBoundaries);
+    window.addEventListener('resize', checkBoundaries);
+
+    // Mouse follower più discreto
+    document.addEventListener('mousemove', (e) => {
+      const follower = document.createElement('div');
+      follower.className = 'mouse-follower';
+      follower.style.left = `${e.clientX}px`;
+      follower.style.top = `${e.clientY}px`;
+      follower.style.zIndex = 100;
+      document.querySelector('.freak-container').appendChild(follower);
+      setTimeout(() => {
+        follower.remove();
+      }, 1000);
     });
-    rows.forEach(row => observer.observe(row));
-});
-// EMAIL
-function showEmailForm() {
-		const emailForm = document.getElementById('email-form');
-		emailForm.style.display = 'block';
-	}
-//CITAZIONE
-        const citazioni = [
-            "La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon",
-            "''Il successo è la somma di piccoli sforzi ripetuti giorno dopo giorno. - Robert Collier''",
-            "Sii il cambiamento che vuoi vedere nel mondo. - Mahatma Gandhi",
-            "La felicità non è qualcosa di già pronto. Viene dalle tue azioni. - Dalai Lama",
-			"Che il diavolo se li porti, tutti quanti! - Raskolnikov"
-			
-			
-        ];
+  </script>
 
-        // Funzione per ottenere l'indice della citazione del giorno
-        function indiceDelGiorno(totaleCitazioni) {
-            const oggi = new Date();
-            const giornoDellAnno = Math.floor((oggi - new Date(oggi.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
-            return giornoDellAnno % totaleCitazioni; // Cicla tra le citazioni
-        }
-
-        // Funzione principale per mostrare la citazione del giorno
-        function mostraCitazione() {
-            const indice = indiceDelGiorno(citazioni.length); // Calcola l'indice
-            const citazione = citazioni[indice]; // Seleziona la citazione
-            document.getElementById("citazione").textContent = citazione; // Mostra la citazione
-        }
-
-        // Esegui la funzione all'avvio
-        mostraCitazione();
-    </script>
 </body>
 </html>
