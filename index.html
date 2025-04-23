@@ -1,142 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AIUTOOOOOOOO - EXTREME EDITION</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Moonrocks&family=Zen+Tokyo+Zoo&family=Creepster&family=Eater&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mattia Casamenti - Portfolio Personale</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="obj/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Menu Hamburger -->
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div id="menu" class="menu">
+            <a href="pages/chiSono/chiSono.html">CHI SONO</a>
+            <a href="obj/CurriculumCasamentiMattia.pdf" download="Curriculum_Casamenti_Mattia.pdf">CURRICULUM</a>
+            <a href="pages/social/social.html">I MIEI CANALI</a>
+            <a href="pages/progetti/progetti.html">I MIEI PROGETTI</a>
+            <a href="pages/passioni/passioni.html">CONOSCIMI MEGLIO</a>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <span class="theme-icon">🌙</span>
+        </div>
+    </nav>
 
-  <!-- Container principale con gestione overflow -->
-  <div class="freak-container">
-    <!-- Immagini principali con z-index controllato -->
-    <div class="floating-img zoomy" style="top: 5vh; left: 5vw; background-image: url('img1.jpg'); z-index: 3;"></div>
-    <div class="rotating-img glitch" style="top: 30vh; left: 70vw; background-image: url('img2.jpg'); z-index: 2;"></div>
-    <div class="bouncing-img fadey" style="top: 10vh; left: 30vw; background-image: url('img3.jpg'); z-index: 4;"></div>
-    <div class="floating-img zoomy" style="top: 60vh; left: 30vw; background-image: url('img4.jpg'); z-index: 1;"></div>
-    <div class="rotating-img fadey" style="top: 10vh; left: 50vw; background-image: url('img5.jpg'); z-index: 5;"></div>
-    
-    <!-- Nuove immagini con animazioni speciali -->
-    <div class="floating-img vortex" style="top: 20vh; left: 20vw; background-image: url('img6.jpg'); z-index: 6;"></div>
-    <div class="broken-img" style="top: 40vh; left: 60vw; background-image: url('img7.jpg'); z-index: 7;"></div>
-    <div class="holographic-img" style="top: 70vh; left: 40vw; background-image: url('img8.jpg'); z-index: 8;"></div>
-    
-    <!-- Testi principali con boundary check -->
-    <div class="weird-text glitch boundary-check" style="top: 10vh; left: 10vw; z-index: 10;">CHE IL DIAVOLO MI PORTI!</div>
-    <div class="other-text zoomy boundary-check" style="top: 70vh; left: 80vw; z-index: 11;">Il senso della vita? Eccolo!</div>
-    <div class="weird-text fadey boundary-check" style="top: 50vh; left: 40vw; z-index: 9;">LA STORIA è SOGGETTIVA?!?</div>
-    <div class="other-text glitch boundary-check" style="top: 20vh; left: 60vw; z-index: 12;">Ignoranza è libertà.</div>
-    
-    <!-- Nuovi testi con animazioni speciali e boundary check -->
-    <div class="creepy-text boundary-check" style="top: 30vh; left: 30vw; z-index: 13;">NON PUOI SFUGGIRE</div>
-    <div class="noise-text boundary-check" style="top: 80vh; left: 20vw; z-index: 14;">01010100 01101001 00100000 01110100 01110010 01101111 01110110 01101001</div>
-    <div class="blood-text boundary-check" style="top: 10vh; left: 80vw; z-index: 15;">TUTTO È VERO</div>
-  </div>
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="img/circle-pic.png" alt="Logo" class="logo">
+                <h1>Mattia Casamenti</h1>
+            </div>
+            <div class="hero-text">
+                <p class="intro">Ciao a tutti, il mio nome è <span class="highlight">Mattia</span>!</p>
+                <h2>Sono un giovane ragazzo motivato a fare esperienze, imparare e mettermi alla prova!</h2>
+                <div class="divider"></div>
+                <p class="cta-text">Cliccando il bottone qui sotto potrai vedere i modi per contattarmi</p>
+                <a href="pages/social/social.html" class="cta-button">Contattami</a>
+            </div>
+            <img src="img/man.png" alt="Stellone d'Italia" class="hero-image">
+        </div>
+    </header>
 
-  <!-- Sfondo separato per non influenzare gli elementi -->
-  <div class="background-layer"></div>
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="img/galleria/ravenna.jpg" alt="Ravenna" loading="lazy">
+                <div class="overlay">
+                    <h3>La mia città</h3>
+                    <p>Ravenna, patrimonio UNESCO</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/galleria/Computer.jpeg" alt="Computer" loading="lazy">
+                <div class="overlay">
+                    <h3>La mia passione</h3>
+                    <p>Geografia e collezionismo</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/galleria/lavoro.jpg" alt="Lavoro" loading="lazy">
+                <div class="overlay">s
+                    <h3>La mia professione</h3>
+                    <p>Studente a tempo perso</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    // Immagini dinamiche con boundary check
-    const dynamicImages = 8; // Ridotto per evitare sovraffollamento
-    const anims = ["zoomy", "glitch", "fadey", "vortex", "broken"];
-    const positions = [
-      {top: "15vh", left: "25vw"},
-      {top: "45vh", left: "75vw"},
-      {top: "75vh", left: "15vw"},
-      {top: "25vh", left: "45vw"},
-      {top: "55vh", left: "85vw"},
-      {top: "85vh", left: "55vw"},
-      {top: "35vh", left: "35vw"},
-      {top: "65vh", left: "65vw"}
-    ];
-    
-    for (let i = 0; i < dynamicImages; i++) {
-      const img = document.createElement('div');
-      img.className = `dynamic-img ${anims[i % anims.length]} boundary-check`;
-      img.style.backgroundImage = `url('img${i + 9}.jpg')`;
-      img.style.top = positions[i].top;
-      img.style.left = positions[i].left;
-      img.style.zIndex = i + 1;
-      document.querySelector('.freak-container').appendChild(img);
-    }
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="section-header">
+            <div class="badge">RISULTATI</div>
+            <h2>Non sono solo numeri</h2>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>YouTube</h3>
+                <div class="stat-value">20</div>
+                <p>Subscribers</p>
+                <a href="https://www.youtube.com/@MattiaCasamenti" target="_blank" class="stat-link">Vai al canale →</a>
+            </div>
+            <div class="stat-card">
+                <h3>Instagram</h3>
+                <div class="stat-value">47</div>
+                <p>Followers</p>
+                <a href="https://www.instagram.com/mattia_casaaa/?utm_source=qr#" target="_blank" class="stat-link">Vai al profilo →</a>
+            </div>
+            <div class="stat-card">
+                <h3>TikTok</h3>
+                <div class="stat-value">32</div>
+                <p>Followers</p>
+                <a href="https://www.tiktok.com/@drawcasa" target="_blank" class="stat-link">Vai a DrawCasa →</a>
+            </div>
+        </div>
+        <div class="quote" id="citazione">Caricamento citazione...</div>
+    </section>
 
-    // Testi dinamici con boundary check
-    const creepyPhrases = [
-      "GUARDA PIÙ IN ALTO",
-      "NON È REALE",
-      "SEI SOLO?",
-      "L'ORA È TARDA",
-      "NON FIDARTI",
-      "CHI SEI VERAMENTE?",
-      "TUTTO È CONNESSO",
-      "IL BUIO ARRIVA"
-    ];
-    
-    for (let i = 0; i < 4; i++) { // Ridotto il numero
-      const text = document.createElement('div');
-      text.className = `dynamic-text ${i % 2 === 0 ? 'creepy-text' : 'noise-text'} boundary-check`;
-      text.textContent = creepyPhrases[Math.floor(Math.random() * creepyPhrases.length)];
-      
-      // Posizionamento sicuro con boundary check
-      const safeTop = Math.min(Math.max(Math.random() * 80, 10), 70);
-      const safeLeft = Math.min(Math.max(Math.random() * 80, 10), 70);
-      
-      text.style.top = `${safeTop}vh`;
-      text.style.left = `${safeLeft}vw`;
-      text.style.zIndex = 20 + i;
-      document.querySelector('.freak-container').appendChild(text);
-    }
+    <!-- Projects Section 
+    <section class="projects-section">
+        <h2>I miei Progetti</h2>
+        <p class="section-subtitle">Vuoi vedere tutto quello che ho compiuto negli <span class="highlight">anni</span>?</p>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="img/progetti/prankSter.png" alt="PranksterHouse" loading="lazy">
+                <div class="project-content">
+                    <h3>PranksterHouse - il mio primo canale YouTube</h3>
+                    <p>Storia personale su come ho realizzato il mio primo canale YouTube</p>
+                    <a href="pages/progetti/projects/prankSter/prankSter.html" class="project-button">Leggi di più</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projects-cta">	
+            <a href="pages/progetti/progetti.html" class="cta-button secondary">Vai ai miei progetti</a>
+        </div>
+    </section>
+	-->
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-content">
+            <h2>Vuoi parlare subito con me?</h2>
+            <p class="contact-text">Se sei un'azienda o un libero professionista e desideri scambiare qualche parola con me</p>
+            <div class="email-option" onclick="showEmailForm()">
+                <span>Scrivimi una Mail</span>
+                <span class="arrow">&#8594;</span>
+            </div>
+            
+            <form id="email-form" class="email-form" action="mailto:mattiacasamenti666@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Il tuo nome" required>
+                <input type="email" name="email" placeholder="La tua email" required>
+                <textarea name="message" placeholder="Scrivi il tuo messaggio qui..." required></textarea>
+                <button type="submit" class="cta-button">Invia</button>
+            </form>
+        </div>
+    </section>
 
-    // Cambio colore sfondo più soft
-    const bgColors = [
-      "#111111", "#1a1a1a", "#222222", 
-      "#2a2a2a", "#333333", "#3a3a3a"
-    ];
-    let colorIndex = 0;
-    setInterval(() => {
-      document.querySelector('.background-layer').style.backgroundColor = bgColors[colorIndex];
-      colorIndex = (colorIndex + 1) % bgColors.length;
-    }, 5000);
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#home" class="footer-link">Home</a>
+            <a href="pages/chiSono/chiSono.html" class="footer-link">Chi Sono</a>
+        </div>
+        
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100069149842017" target="_blank" aria-label="Facebook">
+                <img src="img/footer/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/@MattiaCasamenti" target="_blank" aria-label="YouTube">
+                <img src="img/footer/youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/mattia_casaaa/?utm_source=qr#" target="_blank" aria-label="Instagram">
+                <img src="img/footer/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/mattia-casamenti-8099a1361" target="_blank" aria-label="LinkedIn">
+                <img src="img/footer/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Mattia Casamenti. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
 
-    // Boundary check per elementi che escono dallo schermo
-    function checkBoundaries() {
-      document.querySelectorAll('.boundary-check').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.right > window.innerWidth) {
-          el.style.left = `${parseFloat(el.style.left) - (rect.right - window.innerWidth + 20)}px`;
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Torna su">↑</a>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu Hamburger
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const hamburger = document.querySelector('.hamburger');
+            
+            // Chiudi il menu se è già aperto
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                hamburger.classList.remove("active");
+                document.removeEventListener('click', closeMenuOnClickOutside);
+                return;
+            }
+            
+            // Altrimenti aprilo
+            menu.classList.add("active");
+            hamburger.classList.add("active");
+            document.addEventListener('click', closeMenuOnClickOutside);
         }
-        if (rect.left < 0) {
-          el.style.left = `${parseFloat(el.style.left) + (Math.abs(rect.left) + 20)}px`;
-        }
-        if (rect.bottom > window.innerHeight) {
-          el.style.top = `${parseFloat(el.style.top) - (rect.bottom - window.innerHeight + 20)}px`;
-        }
-        if (rect.top < 0) {
-          el.style.top = `${parseFloat(el.style.top) + (Math.abs(rect.top) + 20)}px`;
-        }
-      });
-    }
 
-    // Esegui boundary check al resize e al load
-    window.addEventListener('load', checkBoundaries);
-    window.addEventListener('resize', checkBoundaries);
+        function closeMenuOnClickOutside(e) {
+            const menu = document.getElementById("menu");
+            const hamburger = document.querySelector('.hamburger');
+            
+            // Se il click è fuori dal menu e non sull'hamburger
+            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+                menu.classList.remove("active");
+                hamburger.classList.remove("active");
+                document.removeEventListener('click', closeMenuOnClickOutside);
+            }
+        }
 
-    // Mouse follower più discreto
-    document.addEventListener('mousemove', (e) => {
-      const follower = document.createElement('div');
-      follower.className = 'mouse-follower';
-      follower.style.left = `${e.clientX}px`;
-      follower.style.top = `${e.clientY}px`;
-      follower.style.zIndex = 100;
-      document.querySelector('.freak-container').appendChild(follower);
-      setTimeout(() => {
-        follower.remove();
-      }, 1000);
-    });
-  </script>
+        // Email Form
+        function showEmailForm() {
+            const emailForm = document.getElementById('email-form');
+            emailForm.style.display = emailForm.style.display === 'block' ? 'none' : 'block';
+        }
 
+        // Daily Quote
+        const citazioni = [
+            "La vita è ciò che accade mentre sei impegnato a fare altri piani. - John Lennon",
+            "Il successo è la somma di piccoli sforzi ripetuti giorno dopo giorno. - Robert Collier",
+            "Sii il cambiamento che vuoi vedere nel mondo. - Mahatma Gandhi",
+            "La felicità non è qualcosa di già pronto. Viene dalle tue azioni. - Dalai Lama",
+            "Che il diavolo se li porti, tutti quanti! - Raskolnikov"
+        ];
+
+        function mostraCitazione() {
+            const oggi = new Date();
+            const giornoDellAnno = Math.floor((oggi - new Date(oggi.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            const indice = giornoDellAnno % citazioni.length;
+            document.getElementById("citazione").textContent = citazioni[indice];
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const themeIcon = document.querySelector('.theme-icon');
+            if (document.body.classList.contains('dark-theme')) {
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Animazioni al scroll
+        document.addEventListener("DOMContentLoaded", () => {
+            // Controlla il tema salvato
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.querySelector('.theme-icon').textContent = '☀️';
+            }
+            
+            mostraCitazione();
+            
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.gallery-item, .stat-card, .project-card').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Back to Top Button
+            window.addEventListener('scroll', () => {
+                const backToTop = document.querySelector('.back-to-top');
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('active');
+                } else {
+                    backToTop.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

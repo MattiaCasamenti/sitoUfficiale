@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I Miei Progetti</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Merriweather:wght@700&family=Segoe+UI:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="../..//obj/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+      <span id="theme-label">Tema Scuro</span>
+    </div>
+    <h1>I Miei Progetti</h1>
+    <nav>
+      <ul>
+        <li><a href="#web">Web</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#other">Altri</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <h2>La mia raccolta di progetti</h2>
+      <p>Esplora il mio percorso creativo e professionale attraverso i progetti che ho realizzato nel tempo.</p>
+    </div>
+  </section>
+
+  <!-- Barra di ricerca -->
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cerca progetto per nome..." aria-label="Cerca progetto">
+      <button id="searchButton">🔍</button>
+    </div>
+  </div>
+
+  <section id="web" class="section">
+    <h2>Progetti Web</h2>
+    
+    <div class="project-grid" id="webProjects">
+      <div class="project-card" data-name="Portfolio Personale">
+        <div class="project-image">
+          <img src="img/website.jpg" alt="Progetto Web 1">
+        </div>
+        <div class="project-content">
+          <h3>Portfolio Personale</h3>
+          <p>Sito web personale realizzato con HTML, CSS e JavaScript per presentare le mie competenze e progetti.</p>
+          <a href="#" class="btn">Vedi Dettagli</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" class="section">
+    <h2>Progetti Video</h2>
+    
+    <div class="project-grid" id="videoProjects">
+      <div class="project-card" data-name="Documentario Ravenna">
+        <div class="project-image">
+          <img src="img/prank.png" alt="Progetto Video 1">
+        </div>
+        <div class="project-content">
+          <h3>PrankSter House</h3>
+          <p>Breve panoramica sul mio primo canale YouTube.</p>
+          <a href="#" class="btn">Vai al progetto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="no-results" id="noResults">
+    <h3>Nessun progetto trovato</h3>
+    <p>Prova con un termine di ricerca diverso</p>
+  </div>
+
+  <section class="section">
+    <h2>Progetti Futuri</h2>
+    <p>Sto lavorando a nuovi progetti che uniscono le mie passioni per la tecnologia, la storia e la creazione di contenuti. Resta sintonizzato per aggiornamenti!</p>
+   <!-- 
+    <div class="image-container">
+      <img src="img/future.jpg" alt="Progetti Futuri" class="img-assoluta1">
+    </div>
+	-->
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Mattia Casamenti. Tutti i diritti riservati.</p>
+    <p><a href="mailto:mattiacasamenti666@gmail.com">Contattami</a> per collaborazioni o informazioni.</p>
+  </footer>
+  <a href="../../index.html" class="floating-home-btn" aria-label="Torna alla Home">🏠</a>
+
+  <script>
+    // Funzionalità di ricerca
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('searchInput');
+      const searchButton = document.getElementById('searchButton');
+      const projectCards = document.querySelectorAll('.project-card');
+      const noResults = document.getElementById('noResults');
+      
+      function searchProjects() {
+        const searchTerm = searchInput.value.toLowerCase();
+        let hasResults = false;
+        
+        projectCards.forEach(card => {
+          const projectName = card.getAttribute('data-name').toLowerCase();
+          const matches = projectName.includes(searchTerm);
+          
+          if (matches) {
+            card.style.display = 'flex';
+            hasResults = true;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // Mostra/nascondi il messaggio "nessun risultato"
+        if (hasResults || searchTerm === '') {
+          noResults.classList.remove('show');
+        } else {
+          noResults.classList.add('show');
+        }
+      }
+      
+      // Ricerca al click del pulsante
+      searchButton.addEventListener('click', searchProjects);
+      
+      // Ricerca mentre si digita (con debounce)
+      let searchTimeout;
+      searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(searchProjects, 300);
+      });
+      
+      // Ricerca anche con Invio
+      searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          searchProjects();
+        }
+      });
+      
+      // Animazione per le card dei progetti
+      projectCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-10px)';
+          this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.15)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+          this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+        });
+      });
+
+      // Toggle tema scuro
+      const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+      const currentTheme = localStorage.getItem('theme');
+      const themeLabel = document.getElementById('theme-label');
+
+      if (currentTheme) {
+        document.body.classList.add(currentTheme);
+        
+        if (currentTheme === 'dark-mode') {
+          toggleSwitch.checked = true;
+          themeLabel.textContent = 'Tema Chiaro';
+        }
+      }
+
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark-mode');
+          themeLabel.textContent = 'Tema Chiaro';
+        } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light-mode');
+          themeLabel.textContent = 'Tema Scuro';
+        }
+      }
+
+      toggleSwitch.addEventListener('change', switchTheme, false);
+    });
+  </script>
+</body>
+</html>

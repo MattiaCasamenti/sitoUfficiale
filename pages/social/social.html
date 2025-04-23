@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Seguimi sui Social | Mattia Casamenti</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../..//obj/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div id="menu" class="menu">
+            <a href="../../index.html">HOME</a>
+            <a href="../../pages/chiSono/chiSono.html">CHI SONO</a>
+            <a href="../../obj/CurriculumCasamentiMattia.pdf" download="Curriculum_Casamenti_Mattia.pdf">CURRICULUM</a>
+            <a href="../../pages/progetti/progetti.html">I MIEI PROGETTI</a>
+			<a href="../../pages/passioni/passioni.html">CONOSCIMI MEGLIO</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Rimani Connesso!</h1>
+            <div class="divider"></div>
+            <p>Mi puoi seguire sui social anche se non credo che pubblicherò nulla.</p>
+        </div>
+    </header>
+
+    <!-- Social Cards Section -->
+    <main class="social-main">
+        <section class="social-grid">
+            <!-- Instagram Card -->
+            <div class="social-card">
+                <div class="card-image">
+                    <img src="img/instagram.jpg" alt="Profilo Instagram" loading="lazy">
+                    <div class="social-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h2>Instagram</h2>
+                    <div class="card-divider"></div>
+                    <p>Se vuoi vedere filosofia, musica e citazioni profonde il mio potrebbe essere l'account giusto!</p>
+                    <a href="https://www.instagram.com/mattia_casaaa/?utm_source=qr#" target="_blank" class="social-btn">Segui su Instagram</a>
+                </div>
+            </div>
+
+            <!-- YouTube Card -->
+            <div class="social-card">
+                <div class="card-image">
+                    <img src="img/youtube.png" alt="Canale YouTube" loading="lazy">
+                    <div class="social-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h2>YouTube</h2>
+                    <div class="card-divider"></div>
+                    <p>Guarda i miei video orizzontali.</p>
+                    <a href="https://www.youtube.com/@MattiaCasamenti" target="_blank" class="social-btn">Iscriviti su YouTube</a>
+                </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="social-card">
+                <div class="card-image">
+                    <img src="img/lavoro.jpeg" alt="Profilo LinkedIn" loading="lazy">
+                    <div class="social-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h2>LinkedIn</h2>
+                    <div class="card-divider"></div>
+                    <p>Collegati con me per aggiornamenti professionali.</p>
+                    <a href="https://www.linkedin.com/in/mattia-casamenti-8099a1361" target="_blank" class="social-btn">Connettiti su LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Contattami per <a href="mailto:mattiacasamenti666@gmail.com">Mail</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100069149842017" target="_blank" aria-label="Facebook">
+                    <img src="img/footer/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/@MattiaCasamenti" target="_blank" aria-label="YouTube">
+                    <img src="img/footer/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/mattia_casaaa/?utm_source=qr#" target="_blank" aria-label="Instagram">
+                    <img src="img/footer/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Home Button -->
+    <a href="../../index.html" class="floating-home-btn" aria-label="Torna alla Home">🏠</a>
+
+    <!-- JavaScript -->
+    <script>
+        // Menu Hamburger
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const hamburger = document.querySelector('.hamburger');
+            menu.classList.toggle("active");
+            hamburger.classList.toggle("active");
+            
+            if (menu.classList.contains("active")) {
+                document.addEventListener('click', closeMenuOnClickOutside);
+            } else {
+                document.removeEventListener('click', closeMenuOnClickOutside);
+            }
+        }
+
+        function closeMenuOnClickOutside(e) {
+            const menu = document.getElementById("menu");
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (!menu.contains(e.target) && e.target !== hamburger && !hamburger.contains(e.target)) {
+                menu.classList.remove("active");
+                hamburger.classList.remove("active");
+                document.removeEventListener('click', closeMenuOnClickOutside);
+            }
+        }
+
+        // Animazioni al scroll
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.social-card').forEach((el, index) => {
+                el.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
