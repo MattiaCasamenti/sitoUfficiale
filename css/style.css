@@ -871,7 +871,180 @@ section {
         padding: 0 1rem;
     }
 }
+@media (max-width: 768px) {
+    /* Aumento dimensioni testo base */
+    body {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+    
+    /* Header e titoli */
+    .hero h1 {
+        font-size: 3rem !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.4;
+    }
+    
+    .intro, .cta-text {
+        font-size: 1.2rem;
+    }
+    
+    /* Menu hamburger */
+    .hamburger {
+        width: 40px;
+        height: 30px;
+    }
+    
+    .bar {
+        height: 4px;
+    }
+    
+    /* Menu a tendina */
+    .menu {
+        padding-top: 7rem;
+    }
+    
+    .menu a {
+        font-size: 1.4rem !important;
+        padding: 1.5rem 0 !important;
+    }
+    
+    /* Pulsante tema */
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        top: 1.2rem;
+        right: 1.2rem;
+    }
+    
+    .theme-icon {
+        font-size: 1.8rem;
+    }
+    
+    /* Sezione statistiche */
+    .stat-card {
+        padding: 2.5rem;
+    }
+    
+    .stat-value {
+        font-size: 3.5rem;
+    }
+    
+    .stat-card p, .stat-link {
+        font-size: 1.2rem;
+    }
+    
+    /* Sezione contatti */
+    .contact-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-text, .email-option {
+        font-size: 1.3rem;
+    }
+    
+    /* Footer */
+    .footer-link {
+        font-size: 1.2rem;
+    }
+    
+    .social-icons img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .copyright {
+        font-size: 1rem;
+    }
+    
+    /* Pulsanti */
+    .cta-button {
+        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+    }
+    
+    /* Form email */
+    .email-form input,
+    .email-form textarea {
+        padding: 1.2rem;
+        font-size: 1.1rem;
+    }
+    
+    /* Citazione */
+    .quote {
+        font-size: 1.3rem;
+        padding: 2rem;
+    }
+}
 
+/* Regole per schermi molto piccoli */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .menu a {
+        font-size: 1.3rem !important;
+    }
+    
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .hero-image {
+        width: 120px !important;
+    }
+    
+    /* Riduci leggermente alcuni elementi per schermi molto piccoli */
+    .stat-card {
+        padding: 2rem;
+    }
+    
+    .stat-value {
+        font-size: 3rem;
+    }
+}
+
+/* Regole per landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    .hero-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .hero-text {
+        text-align: left;
+    }
+    
+    .divider {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .hero-image {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        width: 150px;
+    }
+}
 /* Utility Classes */
 .visible {
     opacity: 1 !important;

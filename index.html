@@ -68,7 +68,7 @@
             </div>
             <div class="gallery-item">
                 <img src="img/galleria/lavoro.jpg" alt="Lavoro" loading="lazy">
-                <div class="overlay">s
+                <div class="overlay">
                     <h3>La mia professione</h3>
                     <p>Studente a tempo perso</p>
                 </div>
@@ -178,23 +178,24 @@
     <!-- JavaScript -->
     <script>
         // Menu Hamburger
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            const hamburger = document.querySelector('.hamburger');
-            
-            // Chiudi il menu se è già aperto
-            if (menu.classList.contains("active")) {
-                menu.classList.remove("active");
-                hamburger.classList.remove("active");
-                document.removeEventListener('click', closeMenuOnClickOutside);
-                return;
-            }
-            
-            // Altrimenti aprilo
-            menu.classList.add("active");
-            hamburger.classList.add("active");
-            document.addEventListener('click', closeMenuOnClickOutside);
-        }
+        // Modifica la funzione toggleMenu per migliorare l'usabilità mobile
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.querySelector('.hamburger');
+    const body = document.body;
+    
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        hamburger.classList.remove("active");
+        body.style.overflow = 'auto'; // Riabilita lo scroll
+        document.removeEventListener('click', closeMenuOnClickOutside);
+    } else {
+        menu.classList.add("active");
+        hamburger.classList.add("active");
+        body.style.overflow = 'hidden'; // Disabilita lo scroll quando il menu è aperto
+        document.addEventListener('click', closeMenuOnClickOutside);
+    }
+}
 
         function closeMenuOnClickOutside(e) {
             const menu = document.getElementById("menu");
