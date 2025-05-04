@@ -1,0 +1,360 @@
+/* Reset e Stili Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            margin-bottom: 30px;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        /* Categorie */
+        .categories {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background: none;
+            border: 2px solid #ecf0f1;
+            color: #ecf0f1;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        /* Sezioni Personaggi */
+        .characters-container {
+            display: none;
+            padding: 20px;
+        }
+
+        .characters-container.active {
+            display: block;
+        }
+
+        .character-section {
+            display: flex;
+            min-height: 100vh;
+            margin: 30px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .character-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .character-image {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        /* Stili per Ottimisti */
+        .optimist .image-overlay {
+            background: linear-gradient(to right, rgba(231, 76, 60, 0.3), rgba(231, 76, 60, 0.1));
+        }
+
+        .optimist .character-content {
+            background-color: #fff;
+        }
+
+        .optimist .character-content h2 {
+            color: #e74c3c;
+        }
+
+        .optimist .quote {
+            color: #e74c3c;
+        }
+
+        .optimist .quote::before {
+            color: #e74c3c;
+        }
+
+        .optimist .happiness-description li::before {
+            color: #e74c3c;
+        }
+
+        /* Stili per Pessimisti */
+        .pessimist .image-overlay {
+            background: linear-gradient(to right, rgba(52, 73, 94, 0.5), rgba(52, 73, 94, 0.3));
+        }
+
+        .pessimist .character-content {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        .pessimist .character-content h2 {
+            color: #3498db;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+        }
+
+        .pessimist .date {
+            color: #bdc3c7;
+        }
+
+        .pessimist .quote {
+            color: #3498db;
+        }
+
+        .pessimist .quote::before {
+            color: #3498db;
+        }
+
+        .pessimist .happiness-description li::before {
+            color: #3498db;
+        }
+
+        .character-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .character-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 10px;
+        }
+
+        .date {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .quote {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            font-style: italic;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5rem;
+        }
+
+        .happiness-description {
+            margin-top: 20px;
+        }
+
+        .happiness-description p {
+            margin-bottom: 15px;
+        }
+
+        .happiness-description ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .happiness-description li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .happiness-description li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #e74c3c;
+        }
+
+        /* Animazioni */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .character-section, .reverse {
+                flex-direction: column;
+            }
+            
+            .character-image {
+                min-height: 300px;
+            }
+            
+            .character-content {
+                padding: 30px 20px;
+            }
+            
+            .categories {
+                flex-wrap: wrap;
+            }
+            
+            .category-btn {
+                margin: 5px;
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .character-content {
+                padding: 20px 15px;
+            }
+            
+            .quote {
+                font-size: 1.1rem;
+            }
+        }
